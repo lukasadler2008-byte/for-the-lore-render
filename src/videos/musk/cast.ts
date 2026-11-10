@@ -238,7 +238,7 @@ const pat = (t: number, k: number) => ((t * 0.9 + k * 0.37) % 1 + 1) % 1;
 
 // ---- 1 hook: gold mountain with tiny Musk, then company slices ----
 const s1 = (cam: CamInfo, t: number, out: Stage, sub: number) => {
-  const tP = wtf(1, "pieces", 0.8), k = smooth((t - tP) / 0.7), B = ST.BIG, sc = B.s * (1 - 0.985 * k);
+  const tD = wtf(1, "none", 0.7), tP = tD + 0.55, k = smooth((t - tD) / 0.9), B = ST.BIG, sc = B.s * (1 - 0.985 * k);
   if (k < 0.995) {
     sv(out, { k: "pile", x: B.x, y: 0, z: B.z, s: sc, yaw: 0.3 });
     soft(out, "255,205,90", 0.85 * (1 - k), 0, 105 * (1 - 0.6 * k), B.z - 40, 420, 300);
@@ -246,7 +246,7 @@ const s1 = (cam: CamInfo, t: number, out: Stage, sub: number) => {
   }
   const mz = lip(B.z, -80, k), my = Math.max(2.1 * 16 + 0.5 * k, 1.1 * sc);
   if (t > tP + 0.5 && k >= 1) { /* on slice */ }
-  MK(cam, t, out, B.x, my * (k < 1 ? 1 : 1), mz, k > 0.5 ? "grin" : "smile_closed", {}, 3.0 - 0.8 * k);
+  MK(cam, t, out, B.x, my * (k < 1 ? 1 : 1), mz, sub === 0 ? "grin" : k > 0.5 ? "grin" : "smile_closed", {}, sub <= 2 ? 7.5 : 7.5 - 5.3 * k);
   for (let i = 0; i < 14; i++) { const a = t * 0.8 + i * 0.7, r = 18 + 8 * hh(i, 2); sv(out, { k: "spark", x: Math.cos(a) * r, y: 150 * (1 - 0.6 * k) + 6 * Math.sin(t * 2 + i), z: B.z + Math.sin(a) * r, s: 2.2 }); }
   if (t > tP - 0.1) {
     const g = easeOutS((t - tP + 0.1) / 0.9), SX = [-26, 0, 26];
