@@ -1,0 +1,38 @@
+name: join
+on:
+  workflow_dispatch:
+    inputs:
+      run_id: { description: "Run id of the render run with part_* artifacts", required: true }
+      audio:  { description: "Audio file in public/", default: "pisa/mix.wav" }
+      name:   { description: "Output name", default: "pisa" }
+permissions:
+  contents: write
+  actions: read
+jobs:
+  join:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - uses: actions/download-artifact@v4
+        with:
+          path: parts
+          pattern: "part_*"
+          merge-multiple: true
+          run-id: ${{ inputs.run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: concat + audio
+        run: |
+          ls parts | sort | sed "s#^#file 'parts/#; s#\$#'#" > list.txt
+          ffmpeg -y -loglevel error -f concat -safe 0 -i list.txt -i "public/${{ inputs.audio }}" \
+            -map 0:v:0 -map 1:a:0 -c:v libx264 -preset medium -crf 21 -pix_fmt yuv420p -c:a aac -b:a 192k -shortest "${{ inputs.name }}.mp4"
+          ls -la "${{ inputs.name }}.mp4"
+      - name: publish to branch
+        run: |
+          git config user.name "render-bot"; git config user.email "bot@users.noreply.github.com"
+          git checkout --orphan out-${{ inputs.name }}
+          git rm -rf . -q || true
+          mkdir -p /tmp/o && mv "${{ inputs.name }}.mp4" /tmp/o/ && cp /tmp/o/* .
+          git add "${{ inputs.name }}.mp4"
+          git commit -qm "render ${{ inputs.name }}"
+          git push -f origin out-${{ inputs.name }}

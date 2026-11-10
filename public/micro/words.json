@@ -1,0 +1,1816 @@
+[
+ {
+  "word": "in",
+  "start": 0.0,
+  "end": 0.14,
+  "line": 1
+ },
+ {
+  "word": "nineteen",
+  "start": 0.14,
+  "end": 0.51,
+  "line": 1,
+  "num": "1945",
+  "grp": 1
+ },
+ {
+  "word": "forty",
+  "start": 0.51,
+  "end": 0.75,
+  "line": 1,
+  "num": "1945",
+  "grp": 1
+ },
+ {
+  "word": "five",
+  "start": 0.75,
+  "end": 1.31,
+  "line": 1,
+  "num": "1945",
+  "grp": 1
+ },
+ {
+  "word": "a",
+  "start": 1.31,
+  "end": 1.37,
+  "line": 1
+ },
+ {
+  "word": "man",
+  "start": 1.37,
+  "end": 1.63,
+  "line": 1
+ },
+ {
+  "word": "who",
+  "start": 1.63,
+  "end": 1.77,
+  "line": 1
+ },
+ {
+  "word": "never",
+  "start": 1.77,
+  "end": 2.11,
+  "line": 1
+ },
+ {
+  "word": "finished",
+  "start": 2.11,
+  "end": 2.49,
+  "line": 1
+ },
+ {
+  "word": "grammar",
+  "start": 2.49,
+  "end": 2.78,
+  "line": 1
+ },
+ {
+  "word": "school",
+  "start": 2.78,
+  "end": 3.14,
+  "line": 1
+ },
+ {
+  "word": "walked",
+  "start": 3.14,
+  "end": 3.5,
+  "line": 1
+ },
+ {
+  "word": "past",
+  "start": 3.5,
+  "end": 3.79,
+  "line": 1
+ },
+ {
+  "word": "a",
+  "start": 3.79,
+  "end": 3.82,
+  "line": 1
+ },
+ {
+  "word": "radar",
+  "start": 3.82,
+  "end": 4.19,
+  "line": 1
+ },
+ {
+  "word": "machine",
+  "start": 4.19,
+  "end": 4.64,
+  "line": 1
+ },
+ {
+  "word": "and",
+  "start": 4.8,
+  "end": 4.91,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 4.91,
+  "end": 4.97,
+  "line": 1
+ },
+ {
+  "word": "candy",
+  "start": 4.97,
+  "end": 5.32,
+  "line": 1
+ },
+ {
+  "word": "bar",
+  "start": 5.32,
+  "end": 5.54,
+  "line": 1
+ },
+ {
+  "word": "in",
+  "start": 5.54,
+  "end": 5.61,
+  "line": 1
+ },
+ {
+  "word": "his",
+  "start": 5.61,
+  "end": 5.76,
+  "line": 1
+ },
+ {
+  "word": "pocket",
+  "start": 5.76,
+  "end": 6.17,
+  "line": 1
+ },
+ {
+  "word": "melted",
+  "start": 6.17,
+  "end": 6.8,
+  "line": 1
+ },
+ {
+  "word": "what",
+  "start": 6.8,
+  "end": 6.91,
+  "line": 2
+ },
+ {
+  "word": "he",
+  "start": 6.91,
+  "end": 7.0,
+  "line": 2
+ },
+ {
+  "word": "did",
+  "start": 7.0,
+  "end": 7.18,
+  "line": 2
+ },
+ {
+  "word": "next",
+  "start": 7.18,
+  "end": 7.65,
+  "line": 2
+ },
+ {
+  "word": "earned",
+  "start": 7.65,
+  "end": 7.81,
+  "line": 2
+ },
+ {
+  "word": "him",
+  "start": 7.81,
+  "end": 7.96,
+  "line": 2
+ },
+ {
+  "word": "exactly",
+  "start": 7.96,
+  "end": 8.63,
+  "line": 2
+ },
+ {
+  "word": "two",
+  "start": 8.63,
+  "end": 8.92,
+  "line": 2,
+  "num": "2",
+  "grp": 2
+ },
+ {
+  "word": "dollars",
+  "start": 8.92,
+  "end": 9.42,
+  "line": 2
+ },
+ {
+  "word": "his",
+  "start": 9.55,
+  "end": 9.69,
+  "line": 3
+ },
+ {
+  "word": "name",
+  "start": 9.69,
+  "end": 9.98,
+  "line": 3
+ },
+ {
+  "word": "was",
+  "start": 9.98,
+  "end": 10.19,
+  "line": 3
+ },
+ {
+  "word": "percy",
+  "start": 10.19,
+  "end": 10.56,
+  "line": 3
+ },
+ {
+  "word": "spencer",
+  "start": 10.56,
+  "end": 11.16,
+  "line": 3
+ },
+ {
+  "word": "and",
+  "start": 11.16,
+  "end": 11.27,
+  "line": 3
+ },
+ {
+  "word": "he",
+  "start": 11.27,
+  "end": 11.36,
+  "line": 3
+ },
+ {
+  "word": "built",
+  "start": 11.36,
+  "end": 11.59,
+  "line": 3
+ },
+ {
+  "word": "radar",
+  "start": 11.59,
+  "end": 11.97,
+  "line": 3
+ },
+ {
+  "word": "for",
+  "start": 11.97,
+  "end": 12.09,
+  "line": 3
+ },
+ {
+  "word": "the",
+  "start": 12.09,
+  "end": 12.16,
+  "line": 3
+ },
+ {
+  "word": "war",
+  "start": 12.16,
+  "end": 12.55,
+  "line": 3
+ },
+ {
+  "word": "at",
+  "start": 12.55,
+  "end": 12.64,
+  "line": 3
+ },
+ {
+  "word": "a",
+  "start": 12.64,
+  "end": 12.69,
+  "line": 3
+ },
+ {
+  "word": "company",
+  "start": 12.69,
+  "end": 13.06,
+  "line": 3
+ },
+ {
+  "word": "called",
+  "start": 13.06,
+  "end": 13.33,
+  "line": 3
+ },
+ {
+  "word": "raytheon",
+  "start": 13.33,
+  "end": 13.89,
+  "line": 3
+ },
+ {
+  "word": "radar",
+  "start": 14.09,
+  "end": 14.41,
+  "line": 4
+ },
+ {
+  "word": "runs",
+  "start": 14.41,
+  "end": 14.69,
+  "line": 4
+ },
+ {
+  "word": "on",
+  "start": 14.69,
+  "end": 14.8,
+  "line": 4
+ },
+ {
+  "word": "a",
+  "start": 14.8,
+  "end": 14.84,
+  "line": 4
+ },
+ {
+  "word": "part",
+  "start": 14.84,
+  "end": 15.18,
+  "line": 4
+ },
+ {
+  "word": "called",
+  "start": 15.18,
+  "end": 15.46,
+  "line": 4
+ },
+ {
+  "word": "a",
+  "start": 15.46,
+  "end": 15.49,
+  "line": 4
+ },
+ {
+  "word": "magnetron",
+  "start": 15.49,
+  "end": 16.21,
+  "line": 4
+ },
+ {
+  "word": "and",
+  "start": 16.35,
+  "end": 16.45,
+  "line": 4
+ },
+ {
+  "word": "back",
+  "start": 16.45,
+  "end": 16.64,
+  "line": 4
+ },
+ {
+  "word": "then",
+  "start": 16.64,
+  "end": 17.04,
+  "line": 4
+ },
+ {
+  "word": "they",
+  "start": 17.04,
+  "end": 17.12,
+  "line": 4
+ },
+ {
+  "word": "were",
+  "start": 17.12,
+  "end": 17.23,
+  "line": 4
+ },
+ {
+  "word": "made",
+  "start": 17.23,
+  "end": 17.43,
+  "line": 4
+ },
+ {
+  "word": "by",
+  "start": 17.43,
+  "end": 17.58,
+  "line": 4
+ },
+ {
+  "word": "hand",
+  "start": 17.58,
+  "end": 18.11,
+  "line": 4
+ },
+ {
+  "word": "about",
+  "start": 18.11,
+  "end": 18.43,
+  "line": 4
+ },
+ {
+  "word": "one",
+  "start": 18.43,
+  "end": 18.52,
+  "line": 4,
+  "num": "100",
+  "grp": 3
+ },
+ {
+  "word": "hundred",
+  "start": 18.52,
+  "end": 18.79,
+  "line": 4,
+  "num": "100",
+  "grp": 3
+ },
+ {
+  "word": "a",
+  "start": 18.79,
+  "end": 18.84,
+  "line": 4
+ },
+ {
+  "word": "day",
+  "start": 18.84,
+  "end": 19.25,
+  "line": 4
+ },
+ {
+  "word": "spencer",
+  "start": 19.25,
+  "end": 19.64,
+  "line": 5
+ },
+ {
+  "word": "found",
+  "start": 19.64,
+  "end": 19.87,
+  "line": 5
+ },
+ {
+  "word": "a",
+  "start": 19.87,
+  "end": 19.91,
+  "line": 5
+ },
+ {
+  "word": "faster",
+  "start": 19.91,
+  "end": 20.35,
+  "line": 5
+ },
+ {
+  "word": "way",
+  "start": 20.35,
+  "end": 20.46,
+  "line": 5
+ },
+ {
+  "word": "and",
+  "start": 20.46,
+  "end": 20.64,
+  "line": 5
+ },
+ {
+  "word": "the",
+  "start": 20.64,
+  "end": 20.86,
+  "line": 5
+ },
+ {
+  "word": "factory",
+  "start": 20.86,
+  "end": 21.28,
+  "line": 5
+ },
+ {
+  "word": "jumped",
+  "start": 21.28,
+  "end": 21.64,
+  "line": 5
+ },
+ {
+  "word": "to",
+  "start": 21.64,
+  "end": 21.75,
+  "line": 5
+ },
+ {
+  "word": "two",
+  "start": 21.75,
+  "end": 22.02,
+  "line": 5,
+  "num": "2,600",
+  "grp": 4
+ },
+ {
+  "word": "thousand",
+  "start": 22.02,
+  "end": 22.39,
+  "line": 5,
+  "num": "2,600",
+  "grp": 4
+ },
+ {
+  "word": "six",
+  "start": 22.39,
+  "end": 22.7,
+  "line": 5,
+  "num": "2,600",
+  "grp": 4
+ },
+ {
+  "word": "hundred",
+  "start": 22.7,
+  "end": 23.09,
+  "line": 5,
+  "num": "2,600",
+  "grp": 4
+ },
+ {
+  "word": "a",
+  "start": 23.09,
+  "end": 23.14,
+  "line": 5
+ },
+ {
+  "word": "day",
+  "start": 23.14,
+  "end": 23.54,
+  "line": 5
+ },
+ {
+  "word": "luckily",
+  "start": 23.54,
+  "end": 24.0,
+  "line": 6
+ },
+ {
+  "word": "that",
+  "start": 24.0,
+  "end": 24.32,
+  "line": 6
+ },
+ {
+  "word": "made",
+  "start": 24.32,
+  "end": 24.51,
+  "line": 6
+ },
+ {
+  "word": "him",
+  "start": 24.51,
+  "end": 24.68,
+  "line": 6
+ },
+ {
+  "word": "the",
+  "start": 24.68,
+  "end": 24.74,
+  "line": 6
+ },
+ {
+  "word": "most",
+  "start": 24.74,
+  "end": 25.0,
+  "line": 6
+ },
+ {
+  "word": "valuable",
+  "start": 25.0,
+  "end": 25.53,
+  "line": 6
+ },
+ {
+  "word": "guy",
+  "start": 25.53,
+  "end": 25.76,
+  "line": 6
+ },
+ {
+  "word": "in",
+  "start": 25.76,
+  "end": 25.85,
+  "line": 6
+ },
+ {
+  "word": "the",
+  "start": 25.85,
+  "end": 25.92,
+  "line": 6
+ },
+ {
+  "word": "building",
+  "start": 25.92,
+  "end": 26.46,
+  "line": 6
+ },
+ {
+  "word": "then",
+  "start": 26.46,
+  "end": 26.94,
+  "line": 7
+ },
+ {
+  "word": "one",
+  "start": 26.94,
+  "end": 27.16,
+  "line": 7
+ },
+ {
+  "word": "day",
+  "start": 27.16,
+  "end": 27.41,
+  "line": 7
+ },
+ {
+  "word": "the",
+  "start": 27.41,
+  "end": 27.61,
+  "line": 7
+ },
+ {
+  "word": "story",
+  "start": 27.61,
+  "end": 27.91,
+  "line": 7
+ },
+ {
+  "word": "goes",
+  "start": 27.91,
+  "end": 28.4,
+  "line": 7
+ },
+ {
+  "word": "he",
+  "start": 28.4,
+  "end": 28.47,
+  "line": 7
+ },
+ {
+  "word": "stands",
+  "start": 28.47,
+  "end": 28.85,
+  "line": 7
+ },
+ {
+  "word": "near",
+  "start": 28.85,
+  "end": 29.07,
+  "line": 7
+ },
+ {
+  "word": "a",
+  "start": 29.07,
+  "end": 29.1,
+  "line": 7
+ },
+ {
+  "word": "running",
+  "start": 29.1,
+  "end": 29.42,
+  "line": 7
+ },
+ {
+  "word": "magnetron",
+  "start": 29.42,
+  "end": 30.2,
+  "line": 7
+ },
+ {
+  "word": "and",
+  "start": 30.2,
+  "end": 30.31,
+  "line": 7
+ },
+ {
+  "word": "a",
+  "start": 30.31,
+  "end": 30.36,
+  "line": 7
+ },
+ {
+  "word": "chocolate",
+  "start": 30.36,
+  "end": 30.79,
+  "line": 7
+ },
+ {
+  "word": "bar",
+  "start": 30.79,
+  "end": 30.98,
+  "line": 7
+ },
+ {
+  "word": "in",
+  "start": 30.98,
+  "end": 31.07,
+  "line": 7
+ },
+ {
+  "word": "his",
+  "start": 31.07,
+  "end": 31.16,
+  "line": 7
+ },
+ {
+  "word": "pocket",
+  "start": 31.16,
+  "end": 31.53,
+  "line": 7
+ },
+ {
+  "word": "turns",
+  "start": 31.53,
+  "end": 31.88,
+  "line": 7
+ },
+ {
+  "word": "to",
+  "start": 31.88,
+  "end": 31.96,
+  "line": 7
+ },
+ {
+  "word": "goo",
+  "start": 31.96,
+  "end": 32.42,
+  "line": 7
+ },
+ {
+  "word": "unluckily",
+  "start": 32.53,
+  "end": 33.12,
+  "line": 8
+ },
+ {
+  "word": "that's",
+  "start": 33.12,
+  "end": 33.48,
+  "line": 8
+ },
+ {
+  "word": "a",
+  "start": 33.48,
+  "end": 33.51,
+  "line": 8
+ },
+ {
+  "word": "ruined",
+  "start": 33.51,
+  "end": 33.88,
+  "line": 8
+ },
+ {
+  "word": "snack",
+  "start": 33.88,
+  "end": 34.35,
+  "line": 8
+ },
+ {
+  "word": "but",
+  "start": 34.35,
+  "end": 34.75,
+  "line": 8
+ },
+ {
+  "word": "he",
+  "start": 34.75,
+  "end": 34.86,
+  "line": 8
+ },
+ {
+  "word": "wasn't",
+  "start": 34.86,
+  "end": 35.16,
+  "line": 8
+ },
+ {
+  "word": "annoyed",
+  "start": 35.16,
+  "end": 35.74,
+  "line": 8
+ },
+ {
+  "word": "he",
+  "start": 35.74,
+  "end": 35.8,
+  "line": 8
+ },
+ {
+  "word": "was",
+  "start": 35.8,
+  "end": 35.96,
+  "line": 8
+ },
+ {
+  "word": "curious",
+  "start": 35.96,
+  "end": 36.72,
+  "line": 8
+ },
+ {
+  "word": "so",
+  "start": 36.72,
+  "end": 37.05,
+  "line": 9
+ },
+ {
+  "word": "he",
+  "start": 37.05,
+  "end": 37.16,
+  "line": 9
+ },
+ {
+  "word": "brought",
+  "start": 37.16,
+  "end": 37.39,
+  "line": 9
+ },
+ {
+  "word": "popcorn",
+  "start": 37.39,
+  "end": 37.86,
+  "line": 9
+ },
+ {
+  "word": "next",
+  "start": 38.02,
+  "end": 38.23,
+  "line": 9
+ },
+ {
+  "word": "to",
+  "start": 38.23,
+  "end": 38.33,
+  "line": 9
+ },
+ {
+  "word": "the",
+  "start": 38.33,
+  "end": 38.4,
+  "line": 9
+ },
+ {
+  "word": "magnetron",
+  "start": 38.4,
+  "end": 39.1,
+  "line": 9
+ },
+ {
+  "word": "the",
+  "start": 39.1,
+  "end": 39.2,
+  "line": 9
+ },
+ {
+  "word": "kernels",
+  "start": 39.2,
+  "end": 39.62,
+  "line": 9
+ },
+ {
+  "word": "popped",
+  "start": 39.62,
+  "end": 40.2,
+  "line": 9
+ },
+ {
+  "word": "then",
+  "start": 40.2,
+  "end": 40.5,
+  "line": 10
+ },
+ {
+  "word": "he",
+  "start": 40.5,
+  "end": 40.62,
+  "line": 10
+ },
+ {
+  "word": "tried",
+  "start": 40.62,
+  "end": 40.85,
+  "line": 10
+ },
+ {
+  "word": "an",
+  "start": 40.85,
+  "end": 40.95,
+  "line": 10
+ },
+ {
+  "word": "egg",
+  "start": 40.95,
+  "end": 41.4,
+  "line": 10
+ },
+ {
+  "word": "it",
+  "start": 41.4,
+  "end": 41.48,
+  "line": 10
+ },
+ {
+  "word": "exploded",
+  "start": 41.48,
+  "end": 42.18,
+  "line": 10
+ },
+ {
+  "word": "in",
+  "start": 42.18,
+  "end": 42.28,
+  "line": 10
+ },
+ {
+  "word": "a",
+  "start": 42.28,
+  "end": 42.32,
+  "line": 10
+ },
+ {
+  "word": "coworker's",
+  "start": 42.32,
+  "end": 42.9,
+  "line": 10
+ },
+ {
+  "word": "face",
+  "start": 42.9,
+  "end": 43.51,
+  "line": 10
+ },
+ {
+  "word": "wait",
+  "start": 43.51,
+  "end": 43.86,
+  "line": 11
+ },
+ {
+  "word": "what",
+  "start": 43.86,
+  "end": 44.18,
+  "line": 11
+ },
+ {
+  "word": "is",
+  "start": 44.18,
+  "end": 44.31,
+  "line": 11
+ },
+ {
+  "word": "a",
+  "start": 44.31,
+  "end": 44.35,
+  "line": 11
+ },
+ {
+  "word": "radar",
+  "start": 44.35,
+  "end": 44.78,
+  "line": 11
+ },
+ {
+  "word": "part",
+  "start": 44.78,
+  "end": 45.07,
+  "line": 11
+ },
+ {
+  "word": "doing",
+  "start": 45.07,
+  "end": 45.3,
+  "line": 11
+ },
+ {
+  "word": "to",
+  "start": 45.3,
+  "end": 45.41,
+  "line": 11
+ },
+ {
+  "word": "food",
+  "start": 45.41,
+  "end": 46.02,
+  "line": 11
+ },
+ {
+  "word": "you",
+  "start": 46.02,
+  "end": 46.08,
+  "line": 12
+ },
+ {
+  "word": "see",
+  "start": 46.08,
+  "end": 46.54,
+  "line": 12
+ },
+ {
+  "word": "a",
+  "start": 46.54,
+  "end": 46.58,
+  "line": 12
+ },
+ {
+  "word": "magnetron",
+  "start": 46.58,
+  "end": 47.22,
+  "line": 12
+ },
+ {
+  "word": "blasts",
+  "start": 47.22,
+  "end": 47.75,
+  "line": 12
+ },
+ {
+  "word": "microwaves",
+  "start": 47.75,
+  "end": 48.47,
+  "line": 12
+ },
+ {
+  "word": "and",
+  "start": 48.47,
+  "end": 48.56,
+  "line": 12
+ },
+ {
+  "word": "the",
+  "start": 48.56,
+  "end": 48.69,
+  "line": 12
+ },
+ {
+  "word": "water",
+  "start": 48.69,
+  "end": 49.0,
+  "line": 12
+ },
+ {
+  "word": "inside",
+  "start": 49.0,
+  "end": 49.34,
+  "line": 12
+ },
+ {
+  "word": "food",
+  "start": 49.34,
+  "end": 49.68,
+  "line": 12
+ },
+ {
+  "word": "wiggles",
+  "start": 49.68,
+  "end": 50.19,
+  "line": 12
+ },
+ {
+  "word": "to",
+  "start": 50.19,
+  "end": 50.25,
+  "line": 12
+ },
+ {
+  "word": "follow",
+  "start": 50.25,
+  "end": 50.58,
+  "line": 12
+ },
+ {
+  "word": "them",
+  "start": 50.58,
+  "end": 50.89,
+  "line": 12
+ },
+ {
+  "word": "wiggling",
+  "start": 50.89,
+  "end": 51.34,
+  "line": 12
+ },
+ {
+  "word": "is",
+  "start": 51.34,
+  "end": 51.5,
+  "line": 12
+ },
+ {
+  "word": "just",
+  "start": 51.5,
+  "end": 51.75,
+  "line": 12
+ },
+ {
+  "word": "heat",
+  "start": 51.75,
+  "end": 52.19,
+  "line": 12
+ },
+ {
+  "word": "it's",
+  "start": 52.19,
+  "end": 52.32,
+  "line": 12
+ },
+ {
+  "word": "like",
+  "start": 52.32,
+  "end": 52.51,
+  "line": 12
+ },
+ {
+  "word": "rubbing",
+  "start": 52.51,
+  "end": 52.76,
+  "line": 12
+ },
+ {
+  "word": "your",
+  "start": 52.76,
+  "end": 52.87,
+  "line": 12
+ },
+ {
+  "word": "hands",
+  "start": 52.87,
+  "end": 53.15,
+  "line": 12
+ },
+ {
+  "word": "together",
+  "start": 53.15,
+  "end": 53.5,
+  "line": 12
+ },
+ {
+  "word": "but",
+  "start": 53.5,
+  "end": 53.77,
+  "line": 12
+ },
+ {
+  "word": "for",
+  "start": 53.77,
+  "end": 53.97,
+  "line": 12
+ },
+ {
+  "word": "every",
+  "start": 53.97,
+  "end": 54.25,
+  "line": 12
+ },
+ {
+  "word": "molecule",
+  "start": 54.25,
+  "end": 54.72,
+  "line": 12
+ },
+ {
+  "word": "at",
+  "start": 54.72,
+  "end": 54.82,
+  "line": 12
+ },
+ {
+  "word": "once",
+  "start": 54.82,
+  "end": 55.23,
+  "line": 12
+ },
+ {
+  "word": "in",
+  "start": 55.36,
+  "end": 55.44,
+  "line": 13
+ },
+ {
+  "word": "nineteen",
+  "start": 55.44,
+  "end": 55.78,
+  "line": 13,
+  "num": "1947",
+  "grp": 5
+ },
+ {
+  "word": "forty",
+  "start": 55.78,
+  "end": 56.02,
+  "line": 13,
+  "num": "1947",
+  "grp": 5
+ },
+ {
+  "word": "seven",
+  "start": 56.02,
+  "end": 56.52,
+  "line": 13,
+  "num": "1947",
+  "grp": 5
+ },
+ {
+  "word": "raytheon",
+  "start": 56.52,
+  "end": 57.02,
+  "line": 13
+ },
+ {
+  "word": "sold",
+  "start": 57.02,
+  "end": 57.32,
+  "line": 13
+ },
+ {
+  "word": "the",
+  "start": 57.32,
+  "end": 57.39,
+  "line": 13
+ },
+ {
+  "word": "first",
+  "start": 57.39,
+  "end": 57.83,
+  "line": 13
+ },
+ {
+  "word": "microwave",
+  "start": 57.83,
+  "end": 58.33,
+  "line": 13
+ },
+ {
+  "word": "oven",
+  "start": 58.33,
+  "end": 58.6,
+  "line": 13
+ },
+ {
+  "word": "it",
+  "start": 58.79,
+  "end": 58.88,
+  "line": 13
+ },
+ {
+  "word": "was",
+  "start": 58.88,
+  "end": 59.0,
+  "line": 13
+ },
+ {
+  "word": "six",
+  "start": 59.0,
+  "end": 59.3,
+  "line": 13,
+  "num": "6",
+  "grp": 6
+ },
+ {
+  "word": "feet",
+  "start": 59.3,
+  "end": 59.5,
+  "line": 13
+ },
+ {
+  "word": "tall",
+  "start": 59.5,
+  "end": 59.99,
+  "line": 13
+ },
+ {
+  "word": "weighed",
+  "start": 59.99,
+  "end": 60.21,
+  "line": 13
+ },
+ {
+  "word": "seven",
+  "start": 60.21,
+  "end": 60.56,
+  "line": 13,
+  "num": "750",
+  "grp": 7
+ },
+ {
+  "word": "hundred",
+  "start": 60.56,
+  "end": 60.85,
+  "line": 13,
+  "num": "750",
+  "grp": 7
+ },
+ {
+  "word": "fifty",
+  "start": 60.85,
+  "end": 61.23,
+  "line": 13,
+  "num": "750",
+  "grp": 7
+ },
+ {
+  "word": "pounds",
+  "start": 61.23,
+  "end": 61.74,
+  "line": 13
+ },
+ {
+  "word": "needed",
+  "start": 61.88,
+  "end": 62.12,
+  "line": 13
+ },
+ {
+  "word": "water",
+  "start": 62.12,
+  "end": 62.44,
+  "line": 13
+ },
+ {
+  "word": "cooling",
+  "start": 62.44,
+  "end": 62.85,
+  "line": 13
+ },
+ {
+  "word": "and",
+  "start": 62.85,
+  "end": 63.04,
+  "line": 13
+ },
+ {
+  "word": "cost",
+  "start": 63.04,
+  "end": 63.37,
+  "line": 13
+ },
+ {
+  "word": "five",
+  "start": 63.37,
+  "end": 63.78,
+  "line": 13,
+  "num": "5,000",
+  "grp": 8
+ },
+ {
+  "word": "thousand",
+  "start": 63.78,
+  "end": 64.28,
+  "line": 13,
+  "num": "5,000",
+  "grp": 8
+ },
+ {
+  "word": "dollars",
+  "start": 64.28,
+  "end": 64.78,
+  "line": 13
+ },
+ {
+  "word": "no",
+  "start": 64.92,
+  "end": 65.18,
+  "line": 14
+ },
+ {
+  "word": "home",
+  "start": 65.18,
+  "end": 65.36,
+  "line": 14
+ },
+ {
+  "word": "kitchen",
+  "start": 65.36,
+  "end": 65.65,
+  "line": 14
+ },
+ {
+  "word": "could",
+  "start": 65.65,
+  "end": 65.79,
+  "line": 14
+ },
+ {
+  "word": "fit",
+  "start": 65.79,
+  "end": 66.02,
+  "line": 14
+ },
+ {
+  "word": "that",
+  "start": 66.02,
+  "end": 66.44,
+  "line": 14
+ },
+ {
+  "word": "so",
+  "start": 66.44,
+  "end": 66.76,
+  "line": 15
+ },
+ {
+  "word": "in",
+  "start": 66.76,
+  "end": 66.9,
+  "line": 15
+ },
+ {
+  "word": "nineteen",
+  "start": 66.9,
+  "end": 67.22,
+  "line": 15,
+  "num": "1967",
+  "grp": 9
+ },
+ {
+  "word": "sixty",
+  "start": 67.22,
+  "end": 67.53,
+  "line": 15,
+  "num": "1967",
+  "grp": 9
+ },
+ {
+  "word": "seven",
+  "start": 67.53,
+  "end": 68.05,
+  "line": 15,
+  "num": "1967",
+  "grp": 9
+ },
+ {
+  "word": "a",
+  "start": 68.05,
+  "end": 68.11,
+  "line": 15
+ },
+ {
+  "word": "countertop",
+  "start": 68.11,
+  "end": 68.68,
+  "line": 15
+ },
+ {
+  "word": "version",
+  "start": 68.68,
+  "end": 68.95,
+  "line": 15
+ },
+ {
+  "word": "arrived",
+  "start": 68.95,
+  "end": 69.31,
+  "line": 15
+ },
+ {
+  "word": "for",
+  "start": 69.31,
+  "end": 69.5,
+  "line": 15
+ },
+ {
+  "word": "four",
+  "start": 69.5,
+  "end": 69.81,
+  "line": 15,
+  "num": "495",
+  "grp": 10
+ },
+ {
+  "word": "hundred",
+  "start": 69.81,
+  "end": 70.13,
+  "line": 15,
+  "num": "495",
+  "grp": 10
+ },
+ {
+  "word": "ninety",
+  "start": 70.13,
+  "end": 70.39,
+  "line": 15,
+  "num": "495",
+  "grp": 10
+ },
+ {
+  "word": "five",
+  "start": 70.39,
+  "end": 70.69,
+  "line": 15,
+  "num": "495",
+  "grp": 10
+ },
+ {
+  "word": "dollars",
+  "start": 70.69,
+  "end": 71.15,
+  "line": 15
+ },
+ {
+  "word": "by",
+  "start": 71.26,
+  "end": 71.37,
+  "line": 16
+ },
+ {
+  "word": "nineteen",
+  "start": 71.37,
+  "end": 71.71,
+  "line": 16,
+  "num": "1975",
+  "grp": 11
+ },
+ {
+  "word": "seventy",
+  "start": 71.71,
+  "end": 72.0,
+  "line": 16,
+  "num": "1975",
+  "grp": 11
+ },
+ {
+  "word": "five",
+  "start": 72.0,
+  "end": 72.47,
+  "line": 16,
+  "num": "1975",
+  "grp": 11
+ },
+ {
+  "word": "microwaves",
+  "start": 72.47,
+  "end": 73.16,
+  "line": 16
+ },
+ {
+  "word": "were",
+  "start": 73.16,
+  "end": 73.33,
+  "line": 16
+ },
+ {
+  "word": "outselling",
+  "start": 73.33,
+  "end": 73.88,
+  "line": 16
+ },
+ {
+  "word": "gas",
+  "start": 73.88,
+  "end": 74.19,
+  "line": 16
+ },
+ {
+  "word": "ranges",
+  "start": 74.19,
+  "end": 74.78,
+  "line": 16
+ },
+ {
+  "word": "today",
+  "start": 74.78,
+  "end": 75.3,
+  "line": 17
+ },
+ {
+  "word": "more",
+  "start": 75.3,
+  "end": 75.42,
+  "line": 17
+ },
+ {
+  "word": "than",
+  "start": 75.42,
+  "end": 75.63,
+  "line": 17
+ },
+ {
+  "word": "ninety",
+  "start": 75.63,
+  "end": 75.96,
+  "line": 17,
+  "num": "90",
+  "grp": 12
+ },
+ {
+  "word": "percent",
+  "start": 75.96,
+  "end": 76.38,
+  "line": 17
+ },
+ {
+  "word": "of",
+  "start": 76.38,
+  "end": 76.47,
+  "line": 17
+ },
+ {
+  "word": "american",
+  "start": 76.47,
+  "end": 76.85,
+  "line": 17
+ },
+ {
+  "word": "homes",
+  "start": 76.85,
+  "end": 77.16,
+  "line": 17
+ },
+ {
+  "word": "have",
+  "start": 77.16,
+  "end": 77.36,
+  "line": 17
+ },
+ {
+  "word": "one",
+  "start": 77.36,
+  "end": 77.57,
+  "line": 17
+ },
+ {
+  "word": "and",
+  "start": 77.73,
+  "end": 77.83,
+  "line": 18
+ },
+ {
+  "word": "spencer",
+  "start": 77.83,
+  "end": 78.43,
+  "line": 18
+ },
+ {
+  "word": "he",
+  "start": 78.43,
+  "end": 78.51,
+  "line": 18
+ },
+ {
+  "word": "got",
+  "start": 78.51,
+  "end": 78.75,
+  "line": 18
+ },
+ {
+  "word": "a",
+  "start": 78.75,
+  "end": 78.79,
+  "line": 18
+ },
+ {
+  "word": "two",
+  "start": 78.79,
+  "end": 79.03,
+  "line": 18,
+  "num": "2",
+  "grp": 13
+ },
+ {
+  "word": "dollar",
+  "start": 79.03,
+  "end": 79.28,
+  "line": 18
+ },
+ {
+  "word": "bonus",
+  "start": 79.28,
+  "end": 79.86,
+  "line": 18
+ },
+ {
+  "word": "the",
+  "start": 79.86,
+  "end": 79.98,
+  "line": 18
+ },
+ {
+  "word": "same",
+  "start": 79.98,
+  "end": 80.25,
+  "line": 18
+ },
+ {
+  "word": "one",
+  "start": 80.25,
+  "end": 80.41,
+  "line": 18
+ },
+ {
+  "word": "raytheon",
+  "start": 80.41,
+  "end": 80.86,
+  "line": 18
+ },
+ {
+  "word": "gave",
+  "start": 80.86,
+  "end": 81.1,
+  "line": 18
+ },
+ {
+  "word": "every",
+  "start": 81.1,
+  "end": 81.43,
+  "line": 18
+ },
+ {
+  "word": "inventor",
+  "start": 81.43,
+  "end": 82.01,
+  "line": 18
+ },
+ {
+  "word": "one",
+  "start": 82.01,
+  "end": 82.14,
+  "line": 19
+ },
+ {
+  "word": "of",
+  "start": 82.14,
+  "end": 82.22,
+  "line": 19
+ },
+ {
+  "word": "the",
+  "start": 82.22,
+  "end": 82.31,
+  "line": 19
+ },
+ {
+  "word": "biggest",
+  "start": 82.31,
+  "end": 82.79,
+  "line": 19
+ },
+ {
+  "word": "kitchen",
+  "start": 82.79,
+  "end": 83.11,
+  "line": 19
+ },
+ {
+  "word": "inventions",
+  "start": 83.11,
+  "end": 83.66,
+  "line": 19
+ },
+ {
+  "word": "ever",
+  "start": 83.66,
+  "end": 84.13,
+  "line": 19
+ },
+ {
+  "word": "was",
+  "start": 84.13,
+  "end": 84.3,
+  "line": 19
+ },
+ {
+  "word": "a",
+  "start": 84.3,
+  "end": 84.33,
+  "line": 19
+ },
+ {
+  "word": "radar",
+  "start": 84.33,
+  "end": 84.78,
+  "line": 19
+ },
+ {
+  "word": "part",
+  "start": 84.78,
+  "end": 85.12,
+  "line": 19
+ },
+ {
+  "word": "that",
+  "start": 85.12,
+  "end": 85.34,
+  "line": 19
+ },
+ {
+  "word": "ruined",
+  "start": 85.34,
+  "end": 85.63,
+  "line": 19
+ },
+ {
+  "word": "a",
+  "start": 85.63,
+  "end": 85.68,
+  "line": 19
+ },
+ {
+  "word": "snack",
+  "start": 85.68,
+  "end": 86.37,
+  "line": 19
+ }
+]

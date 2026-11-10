@@ -1,0 +1,76 @@
+name: render
+on:
+  workflow_dispatch:
+    inputs:
+      composition: { description: "Remotion composition id", default: "PisaShort" }
+      frames:      { description: "Total frames", default: "1936" }
+      chunks:      { description: "Number of parallel chunks", default: "20" }
+      scale:       { description: "Scale (1 = 1080x1920)", default: "1" }
+      audio:       { description: "Audio file in public/", default: "pisa/mix.wav" }
+      name:        { description: "Output name", default: "pisa" }
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.m.outputs.matrix }}
+    steps:
+      - id: m
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json,math
+          n=int("${{ inputs.frames }}"); c=int("${{ inputs.chunks }}")
+          size=math.ceil(n/c); out=[]
+          for i in range(c):
+              a=i*size; b=min(n-1,(i+1)*size-1)
+              if a<=b: out.append({"i":f"{i:02d}","a":a,"b":b})
+          print("matrix="+json.dumps({"include":out}))
+          PY
+  render:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - name: render chunk
+        run: |
+          mkdir -p out
+          START=$(date +%s)
+          for try in 1 2 3; do
+            npx remotion render src/index.ts "${{ inputs.composition }}" out/part_${{ matrix.i }}.mp4 \
+              --frames=${{ matrix.a }}-${{ matrix.b }} --scale ${{ inputs.scale }} --concurrency 2 \
+              --timeout 900000 --crf 16 --muted && break
+            echo "attempt $try failed, retrying"; sleep 5
+          done
+          test -f out/part_${{ matrix.i }}.mp4
+          echo "chunk seconds: $(( $(date +%s) - START ))"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: part_${{ matrix.i }}
+          path: out/part_${{ matrix.i }}.mp4
+          retention-days: 2
+  join:
+    needs: render
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { path: parts, pattern: "part_*", merge-multiple: true }
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - name: concat + audio
+        run: |
+          ls parts | sort | sed "s#^#file 'parts/#; s#\$#'#" > list.txt
+          ffmpeg -y -loglevel error -f concat -safe 0 -i list.txt -i "public/${{ inputs.audio }}" \
+            -map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -b:a 192k -shortest "${{ inputs.name }}.mp4"
+          ls -la "${{ inputs.name }}.mp4"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: final-${{ inputs.name }}
+          path: ${{ inputs.name }}.mp4
+          retention-days: 7
