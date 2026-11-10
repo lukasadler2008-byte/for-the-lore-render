@@ -139,8 +139,7 @@ const SUMMIT: V3 = [0, BIG.s * 1.06 + 8, BIG.z];
 const SPEC: Spec[] = [
   // 1 hook: mountain of gold with tiny Musk on top, then the pile turns into translucent company slices
   { line: 1, t0: 0, set: "mountain", light: "golden", sunAz: 160, sunEl: 12, cam: mv([9, 150.5, -68], [4.5, 153.5, -78], [0, 155.0, BIG.z], [0, 156.0, BIG.z], 44, 38, 0.06, -0.02) },
-  { line: 1, t0: wtf(1, "eight", 0.4), set: "mountain", light: "golden", sunAz: 160, sunEl: 12, cam: mv([4, 150, -78], [10, 40, 150], [0, 156, BIG.z], [0, 100, BIG.z], 44, 66, -0.05, 0.03, easeIn) },
-  { line: 1, t0: wtf(1, "dollars", 0.8), set: "mountain", light: "golden", sunAz: 150, sunEl: 14, cam: orb(SUMMIT, 38, 26, 156, 160, 0.2, 1.5, SUMMIT, 50, 42) },
+  { line: 1, t0: wtf(1, "eight", 0.4), set: "mountain", light: "golden", sunAz: 155, sunEl: 13, cam: mv([4.5, 153.5, -78], [10, 40, 150], [0, 156, BIG.z], [0, 100, BIG.z], 38, 66, -0.02, 0.03) },
   { line: 1, t0: wtf(1, "none", 0.7), set: "mountain", light: "golden", sunAz: 150, sunEl: 14, cam: mv([-10, 30, 78], [8, 46, 66], [0, 60, BIG.z], [0, 40, -86], 62, 56, -0.05, 0.05) },
   { line: 1, t0: wtf(1, "it's", 0.7), set: "mountain", light: "golden", sunAz: 150, sunEl: 14, cam: mv([-6, 3, 72], [4, 9, 52], [0, 22, -80], [0, 30, -80], 62, 54, -0.06, 0.04) },
   // 2 1999 office: buyer, briefcase, 307 bars -> 22

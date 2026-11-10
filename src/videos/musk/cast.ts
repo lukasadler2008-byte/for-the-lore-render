@@ -246,7 +246,7 @@ const s1 = (cam: CamInfo, t: number, out: Stage, sub: number) => {
   }
   const mz = lip(B.z, -80, k), my = Math.max(2.1 * 16 + 0.5 * k, 1.1 * sc);
   if (t > tP + 0.5 && k >= 1) { /* on slice */ }
-  MK(cam, t, out, B.x, my * (k < 1 ? 1 : 1), mz, sub === 0 ? "grin" : k > 0.5 ? "grin" : "smile_closed", {}, sub <= 2 ? 7.5 : 7.5 - 5.3 * k);
+  MK(cam, t, out, B.x, my * (k < 1 ? 1 : 1), mz, sub === 0 ? "grin" : k > 0.5 ? "grin" : "smile_closed", {}, sub <= 1 ? 7.5 : 7.5 - 5.3 * k);
   for (let i = 0; i < 14; i++) { const a = t * 0.8 + i * 0.7, r = 18 + 8 * hh(i, 2); sv(out, { k: "spark", x: Math.cos(a) * r, y: 150 * (1 - 0.6 * k) + 6 * Math.sin(t * 2 + i), z: B.z + Math.sin(a) * r, s: 2.2 }); }
   if (t > tP - 0.1) {
     const g = easeOutS((t - tP + 0.1) / 0.9), SX = [-26, 0, 26];
