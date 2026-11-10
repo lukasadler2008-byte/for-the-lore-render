@@ -204,7 +204,7 @@ const idle = (cam: CamInfo, t: number, out: Stage, i: number, o: Outfit, okey: s
 // The Musk cast and the 18 scenes (one function per voice line; `sub` is the sub-shot index inside the line)
 // =====================================================================================================================
 const { wt, wtf, lf, lineStart, lineEnd } = ST;
-const MUSK: Outfit = { jacket: "#20263a", pants: "#2c303e", boots: "#14161c", hat: "hair", hair: "#2a1c14", skin: SKINS[1] };
+const MUSK: Outfit = { jacket: "#16171c", pants: "#23262f", boots: "#101216", hat: "hair", hair: "#1c130e", skin: SKINS[0] };
 const BEZOS: Outfit = { jacket: "#3f7a9a", pants: "#3a3f52", boots: "#1c1c22", hat: null, skin: SKINS[2] };
 const PAGE: Outfit = { jacket: "#c9573b", pants: "#3b4258", boots: "#2a2a30", hat: "hair", hair: "#5a3a26", skin: SKINS[0] };
 const OFFICIAL: Outfit = { jacket: "#2b3050", pants: "#2b3050", boots: "#16151b", hat: "hair", hair: "#cfcfd6", tie: "#2f6fd0", shirt: "#f4f0e6", build: "stout", skin: SKINS[2] };
