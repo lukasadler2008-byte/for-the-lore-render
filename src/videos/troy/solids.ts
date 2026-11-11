@@ -298,16 +298,20 @@ const ropeObj = () => {
 const ladderObj = () => mk((b) => { const W = C("lad", "#a8744a"); box(b, W, 0.07, 1, 0.07, -0.22, 0.5, 0); box(b, W, 0.07, 1, 0.07, 0.22, 0.5, 0); for (let i = 1; i < 12; i++) box(b, W, 0.44, 0.04, 0.05, 0, i / 12, 0); });
 const stowerObj = () => mk((b) => {
   const W = C("stW", "#8a5a34"), D = C("stD", "#5a3a22"), H = C("stH", "#c9a46a");
-  box(b, W, 3, 6, 3, 0, 0.5, 0); for (const [x, z] of [[-1.6, -1.6], [1.6, -1.6], [-1.6, 1.6], [1.6, 1.6]]) cyl(b, D, 0.55, 0.3, x, 0.55, z, 0, Math.PI / 2, 16);
+  box(b, W, 3, 6, 3, 0, 3.5, 0); for (const [x, z] of [[-1.6, -1.6], [1.6, -1.6], [-1.6, 1.6], [1.6, 1.6]]) cyl(b, D, 0.55, 0.3, x, 0.55, z, 0, Math.PI / 2, 16);
   for (let i = 0; i < 4; i++) box(b, D, 3.06, 0.14, 3.06, 0, 1.6 + i * 1.4, 0);
   box(b, D, 3.2, 0.3, 3.2, 0, 6.5, 0); for (const [x, z] of [[-1.5, -1.5], [1.5, -1.5], [-1.5, 1.5], [1.5, 1.5]]) box(b, W, 0.26, 0.9, 0.26, x, 6.8, z);
   box(b, H, 3.1, 0.5, 0.1, 0, 6.8, -1.55); box(b, C("stR", "#c0392f"), 3.1, 0.4, 0.1, 0, 5.2, -1.55);
   box(b, DK2(), 0.9, 1.1, 0.06, 0, 2.2, -1.5);
 });
 const DK2 = () => C("stDk", "#1a1208");
+const rockObj = (i: number) => mk((b) => { box(b, C('rockA' + (i % 3), ['#cdb892', '#b89f78', '#d6c29c'][i % 3]), 1, 0.7, 0.8, 0, 0.35, 0); });
 const fireObj = () => {
-  const g = new THREE.Group(), o = new THREE.Mesh(new THREE.ConeGeometry(0.9, 2, 9, 1, true).translate(0, 1, 0), glow([2.5, 0.8, 0.12])), n = new THREE.Mesh(new THREE.ConeGeometry(0.55, 1.5, 9, 1, true).translate(0, 0.75, 0), glow([3.0, 1.7, 0.3])), m = new THREE.Mesh(new THREE.ConeGeometry(0.4, 1.7, 7, 1, true).translate(0.35, 0.85, 0.1), glow([2.8, 1.1, 0.2]));
-  g.add(o, n, m); return { o: g, upd: (r: SR) => { const L = r.a ?? 2, w = 0.5 + 0.12 * L, ph = r.b ?? 0; o.scale.set(w * (1 + 0.1 * Math.sin(ph * 1.3)), L * (0.5 + 0.1 * Math.sin(ph)), w); n.scale.set(w, L * (0.45 + 0.08 * Math.sin(ph * 1.7 + 1)), w); m.scale.set(w * 0.9, L * (0.5 + 0.12 * Math.sin(ph * 1.1 + 2)), w); } };
+  const g = new THREE.Group(), T: THREE.Mesh[] = [];
+  const mats = [glow([1.7, 0.22, 0.02]), glow([2.1, 0.55, 0.04]), glow([2.5, 1.1, 0.1])];
+  const defs: [number, number, number, number, number][] = [[0, 0, 0.42, 1.0, 0], [0.28, 0.1, 0.3, 0.75, 1], [-0.3, -0.05, 0.32, 0.8, 1], [0.1, -0.28, 0.26, 0.6, 2], [-0.12, 0.26, 0.24, 0.55, 2], [0, 0, 0.24, 0.7, 2]];
+  for (const [x, z, r, h, m] of defs) { const c = new THREE.Mesh(new THREE.ConeGeometry(r, 1, 6).translate(0, 0.5, 0), mats[m]); c.position.set(x, 0, z); c.userData = { h, x, z }; g.add(c); T.push(c); }
+  return { o: g, upd: (r: SR) => { const L = r.a ?? 2, ph = r.b ?? 0; T.forEach((c, i) => { const { h } = c.userData as { h: number }; c.scale.set(1, L * h * (0.8 + 0.25 * Math.sin(ph * (1.1 + i * 0.37) + i * 2)), 1); c.rotation.z = 0.12 * Math.sin(ph * 0.9 + i); }); } };
 };
 const torchObj = () => { const g = new THREE.Group(); g.add(mk((b) => { cyl(b, C("torchS", "#6a4630"), 0.04, 0.9, 0, 0.45, 0, 0, 0, 8); cyl(b, C("torchH", "#3a2a22"), 0.07, 0.14, 0, 0.92, 0, 0, 0, 8); })); const f = new THREE.Mesh(new THREE.ConeGeometry(0.1, 0.34, 8).translate(0, 0.17, 0), glow([5, 2.2, 0.5])); f.position.y = 0.98; g.add(f); return { o: g, upd: (r: SR) => { f.scale.set(1, 0.9 + 0.3 * Math.sin((r.b ?? 0) * 13), 1); } }; };
 
@@ -345,7 +349,7 @@ export class Solids {
     add("pie", 2, () => { const p = pieObj(); return { o: p.g, upd: (r) => { p.wedges.forEach((w, i) => { const pull = i < 2 ? (r.a ?? 0) : 0, m = p.mids[i]; w.position.set(Math.sin(m) * pull, i < 2 ? (r.b ?? 0) * pull : 0, Math.cos(m) * pull); }); } }; });
     add("mtruck", 1, mtruckObj); add("mmark", 3, mblockObj);
     add("smoke", 36, smokeObj); add("dsmoke", 24, darkSmokeObj); add("conf", 70, confObj); add("shard", 30, shardObj); add("spark", 40, sparkObj);
-    add("horse", 1, horseObj); add("gate", 1, gateObj); add("rope", 12, ropeObj); add("ladder", 6, ladderObj); add("stower", 1, stowerObj); add("torch", 8, torchObj); add("fire", 44, fireObj); add("qmark", 4, qmarkObj); add("pbox", 44, pboxObj); add("scale", 1, scaleObj); add("env", 1, envObj); add("wreck", 4, wreckObj);
+    add("horse", 1, horseObj); add("gate", 1, gateObj); add("rope", 12, ropeObj); add("ladder", 6, ladderObj); add("stower", 1, stowerObj); add("torch", 8, torchObj); add("fire", 44, fireObj); add("rock", 48, rockObj); add("qmark", 4, qmarkObj); add("pbox", 44, pboxObj); add("scale", 1, scaleObj); add("env", 1, envObj); add("wreck", 4, wreckObj);
   }
   private place(o: THREE.Object3D, r: SR, cq: THREE.Quaternion) {
     o.visible = true; o.position.set(r.x, r.y, r.z);

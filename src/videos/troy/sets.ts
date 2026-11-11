@@ -440,11 +440,10 @@ export const buildSets = (root: THREE.Object3D, kit: Kit): SetBuild => {
       const layers = [["#d9bf86", 0.4], ["#8a5a34", 0.4], ["#161012", 0.5], ["#c4a468", 0.4], ["#9a8a70", 0.3]] as const;
       let y = 0; for (const [col, hgt] of layers) { const m = C("lay" + col, col); y -= hgt; for (const z of [TZ0, TZ1]) box(b, m, 0, y, z, TX1 - TX0, hgt, 0.1); for (const x of [TX0, TX1]) box(b, m, x, y, (TZ0 + TZ1) / 2, 0.1, hgt, TZ1 - TZ0); }
       for (let i = 0; i < 16; i++) { const rr = rng(i + 3); box(b, stoneM, -5.5 + (i % 8) * 1.4 + rr() * 0.3, -2.0, -11.5 + Math.floor(i / 8) * 2.4, 1 + rr() * 0.6, 0.5 + rr() * 0.6, 0.9, rr()); }
-      for (let i = 0; i < 24; i++) { const rr = rng(i + 90); box(b, stoneM, -14 + rr() * 28, 0, 2 + rr() * 16, 1.4 + rr() * 1.6, 0.5 + rr() * 0.8, 1 + rr(), rr() * 3); }
-      for (let i = 0; i < 6; i++) cylY(b, stoneM, -12 + i * 4.6, 0, 9 + (i % 2) * 2, 0.8, 0.7 + (i % 3) * 0.5, 14);
+      for (let i = 0; i < 12; i++) { const rr = rng(i + 90); box(b, stoneM, -16 + rr() * 32, 0, 9 + rr() * 14, 1.4 + rr() * 1.6, 0.5 + rr() * 0.8, 1 + rr(), rr() * 3); }
+      for (let i = 0; i < 6; i++) cylY(b, stoneM, -14 + i * 5.6, 0, 12 + (i % 2) * 3, 0.8, 0.7 + (i % 3) * 0.5, 14);
       for (const z of [TZ0, TZ1]) for (const x of [-9, 0, 9]) { cylY(b, M.woodDk(), x, 0, z + (z === TZ0 ? -1.2 : 1.2), 0.05, 1.0, 6); }
       b.add(beamGeo(V(-9, 0.9, -14.2), V(9, 0.9, -14.2), 0.02), C("string", "#f4f0e6"), undefined);
-      for (const [x, z] of [[-14, -2], [14, -2], [-14, 8], [14, 8]]) cylY(b, M.woodDk(), x, 0, z, 0.1, 3.4, 8); box(b, C("canopy", "#efe3c4"), 0, 3.4, 3, 29, 0.12, 11);
       box(b, M.wood(), 0, 0, 5, 3, 0.9, 1.2); box(b, M.woodDk(), -9, 0, 6, 1.4, 0.15, 1.4);
       for (let i = 0; i < 8; i++) { const rr = rng(i + 140); cylY(b, C("bucket", "#c0392f"), -11 + rr() * 22, 0, 6 + rr() * 4, 0.28, 0.4, 10, 0.22); }
       mesaRing(b, hillM, 12, 400, 600, 30, 90, 13, Math.PI * 2, 0.1);

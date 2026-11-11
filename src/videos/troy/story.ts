@@ -107,35 +107,44 @@ const SPEC: Spec[] = [
   // 8 by morning, Troy burns
   { line: 8, t0: lineStart(8), set: "troy", light: "golden", sunAz: 170, sunEl: 6, cam: mv([-12, 21, 30], [-8, 24, 20], [0, 5, -46], [0, 8, -48], 56, 52, 0.03, -0.02) },
   { line: 8, t0: wt(8, "burning"), set: "troy", light: "golden", sunAz: 170, sunEl: 6, cam: mv([2, 2.2, -29], [1, 3.0, -32], [-16, 6, -46], [-17, 9, -48], 52, 58, -0.05, 0.03) },
-  // 9 Homer: no horse in the Iliad
-  { line: 9, t0: lineStart(9), set: "camp", light: "golden", sunAz: 160, sunEl: 8, cam: mv([3.8, 1.5, 8.5], [3.0, 1.55, 7.2], [1.8, 1.4, 4.0], [1.8, 1.5, 4.0], 38, 34, 0.04, -0.02) },
-  { line: 9, t0: wt(9, "never"), set: "camp", light: "golden", sunAz: 160, sunEl: 8, cam: orb([1.8, 0, 4.0], 4.4, 3.4, 1.5, 1.7, 0.7, 0.1, [1.8, 1.45, 4.0], 46, 42) },
-  // 10 Virgil, twelve hundred years later (a candle burns down)
-  { line: 10, t0: lineStart(10), set: "troy", light: "golden", sunAz: 150, sunEl: 12, cam: mv([-9, 1.5, 20.5], [-8, 1.6, 19.4], [-5.6, 1.4, 16.0], [-5.6, 1.5, 16.0], 38, 34, -0.04, 0.02) },
-  { line: 10, t0: wt(10, "twelve"), set: "troy", light: "golden", sunAz: 150, sunEl: 12, cam: mv([-7.6, 0.9, 18.8], [-6.4, 1.1, 17.6], [-5.0, 1.0, 16.0], [-5.0, 1.2, 16.0], 40, 34, 0.05, -0.02) },
-  // 11 Troy was real: Turkey, the dig, the burned layer
-  { line: 11, t0: lineStart(11), set: "dig", light: "day", sunAz: 130, sunEl: 48, cam: mv([-9, 5.5, 14], [-5, 4.0, 10], [0, 0, -6], [0, -0.5, -8], 56, 52, 0.03, 0) },
-  { line: 11, t0: wt(11, "ruins"), set: "dig", light: "day", sunAz: 130, sunEl: 48, cam: mv([-3.8, 1.4, 1.4], [-2.6, 1.6, -0.6], [0, 0.6, -8], [0, 0.4, -8], 50, 46, 0.04, -0.02) },
-  { line: 11, t0: wt(11, "burned"), set: "dig", light: "day", sunAz: 130, sunEl: 48, cam: mv([3.4, -0.9, -5.2], [2.6, -1.0, -6.2], [0, -1.05, -12.9], [0, -1.1, -12.9], 52, 46, -0.04, 0.02) },
+  // 9 Homer tells the story at the Greek campfire; the soldiers see no horse in it
+  { line: 9, t0: lineStart(9), set: "camp", light: "golden", sunAz: 160, sunEl: 8, cam: orb([2, 0, 4], 9, 7, 2.6, 1.8, 0.6, 1.3, [2, 1.3, 4], 54, 48) },
+  { line: 9, t0: wt(9, "homers"), set: "camp", light: "golden", sunAz: 160, sunEl: 8, cam: mv([4.4, 1.4, 10.4], [3.4, 1.5, 9.0], [2, 1.5, 6.6], [2, 1.55, 6.6], 38, 33, 0.04, -0.02) },
+  { line: 9, t0: wt(9, "never"), set: "camp", light: "golden", sunAz: 160, sunEl: 8, cam: mv([-1.5, 1.5, 6.5], [0, 1.7, 5.8], [2.2, 2.4, 3.0], [2.2, 2.8, 3.0], 52, 48, -0.04, 0.02) },
+  // 10 Virgil on the temple steps, twelve hundred years of candle later
+  { line: 10, t0: lineStart(10), set: "troy", light: "golden", sunAz: 170, sunEl: 8, cam: mv([-3, 1.8, -60.5], [-1.8, 1.9, -61.8], [0, 1.8, -66], [0, 1.9, -66], 44, 38, 0.04, -0.02) },
+  { line: 10, t0: wt(10, "roman"), set: "troy", light: "golden", sunAz: 170, sunEl: 8, cam: mv([4, 1.9, -54.5], [2.6, 2.0, -56], [0, 2.4, -66], [0, 2.6, -66], 50, 46, -0.04, 0.02) },
+  { line: 10, t0: wt(10, "twelve"), set: "troy", light: "night", sunAz: 150, sunEl: 40, cam: mv([2.4, 1.7, -61], [1.4, 1.8, -62], [-0.8, 1.8, -65.6], [-0.8, 1.8, -65.6], 38, 32, 0.0, 0.05) },
+  { line: 10, t0: wt(10, "later"), set: "troy", light: "golden", sunAz: 175, sunEl: 5, cam: mv([-5, 1.8, -58.5], [-3, 2.6, -60], [0, 2.6, -66], [0, 3.4, -66], 50, 44, -0.05, 0.03) },
+  // 11 Troy was real: Turkey, a busy dig, the burned layer, the flashback
+  { line: 11, t0: lineStart(11), set: "dig", light: "day", sunAz: 130, sunEl: 48, cam: mv([-10, 5.5, 15], [-6, 4.0, 11], [0, 0, -6], [0, -0.5, -8], 56, 52, 0.03, 0) },
+  { line: 11, t0: wt(11, "ruins"), set: "dig", light: "day", sunAz: 130, sunEl: 48, cam: mv([12, 2.4, 14], [8, 2.2, 10], [-2, 1, 4], [-2, 1, 4], 56, 50, -0.04, 0.02) },
+  { line: 11, t0: wt(11, "diggers"), set: "dig", light: "day", sunAz: 130, sunEl: 48, cam: mv([2.5, 0.6, -2.2], [1.6, 0.2, -4.0], [-0.5, -1.2, -9.5], [-0.5, -1.2, -9.5], 46, 42, 0.04, -0.03) },
+  { line: 11, t0: wt(11, "burned"), set: "dig", light: "golden", sunAz: 150, sunEl: 10, cam: mv([3.4, -0.9, -5.2], [2.6, -1.0, -6.2], [0, -1.0, -12.9], [0, -1.1, -12.9], 52, 46, -0.04, 0.02) },
   // 12 nobody has found a horse
-  { line: 12, t0: lineStart(12), set: "dig", light: "day", sunAz: 130, sunEl: 48, cam: mv([3, 1.8, 3], [1.5, 1.9, 1.5], [0, 1.0, -6], [0, 0.4, -7], 52, 46, 0.03, -0.02) },
-  { line: 12, t0: wt(12, "found"), set: "dig", light: "day", sunAz: 130, sunEl: 48, cam: mv([-2.5, 1.5, 6], [-1.0, 1.55, 4.8], [0, 1.2, 1], [0, 1.2, 1], 40, 36, -0.03, 0.02) },
-  // 13 wait, where did the story come from?
-  { line: 13, t0: lineStart(13), set: "dig", light: "day", sunAz: 130, sunEl: 48, cam: orb([-1, 0, 2.5], 4.6, 3.6, 1.5, 1.9, -0.5, 0.2, [-1, 1.4, 2.5], 48, 42) },
-  { line: 13, t0: wt(13, "story"), set: "dig", light: "day", sunAz: 130, sunEl: 48, cam: mv([-1.4, 1.5, 6.3], [-1.1, 1.6, 4.6], [-1, 1.6, 2.5], [-1, 1.7, 2.5], 34, 30, 0.04, -0.03) },
-  // 14 siege machine / earthquake / Poseidon
-  { line: 14, t0: lineStart(14), set: "troy", light: "day", sunAz: 130, sunEl: 40, cam: mv([-20, 3.4, 12], [-16, 3.8, 2], [-6, 4, 2], [-6, 4.5, -6], 56, 50, 0.03, -0.02) },
-  { line: 14, t0: wt(14, "earthquake"), set: "troy", light: "day", sunAz: 130, sunEl: 40, cam: shake(mv([10, 1.8, 6], [7, 2.4, 3], [-4, 6, -22], [-4, 7, -22], 56, 52, 0.0, 0.0)) },
-  { line: 14, t0: wt(14, "poseidon"), set: "camp", light: "golden", sunAz: 160, sunEl: 8, cam: mv([-4.4, 1.0, -30], [-3.4, 1.8, -31.5], [0, 4.5, -37.5], [0, 5.5, -38], 56, 52, 0.04, -0.02) },
-  { line: 14, t0: wt(14, "horses"), set: "camp", light: "golden", sunAz: 160, sunEl: 8, cam: orb([0, 0, -37], 11, 9, 2.8, 4.2, -0.9, 0.3, [0, 3.6, -37], 52, 50) },
-  // 15 maybe the walls simply fell
+  { line: 12, t0: lineStart(12), set: "dig", light: "day", sunAz: 130, sunEl: 48, cam: mv([4.5, 1.8, 4.5], [3, 2.0, 3], [0, 1.2, -4], [0, 0.6, -6], 54, 48, 0.03, -0.02) },
+  { line: 12, t0: wt(12, "ever"), set: "dig", light: "day", sunAz: 130, sunEl: 48, cam: mv([-2.4, 1.5, 6.0], [-0.9, 1.6, 4.8], [0.4, 1.4, 1.0], [0.4, 1.6, 1.0], 40, 36, -0.03, 0.02) },
+  // 13 where did the story come from
+  { line: 13, t0: lineStart(13), set: "dig", light: "day", sunAz: 130, sunEl: 48, cam: orb([-0.4, 0, 2.5], 5.0, 3.8, 1.5, 2.0, -0.6, 0.3, [-0.4, 1.5, 2.5], 48, 42) },
+  { line: 13, t0: wt(13, "story"), set: "dig", light: "day", sunAz: 130, sunEl: 48, cam: mv([-1.6, 1.3, 6.4], [-1.2, 1.5, 4.8], [-0.4, 2.0, 2.5], [-0.4, 2.6, 2.5], 36, 30, 0.04, -0.03) },
+  // 14 siege machine, earthquake, Poseidon and his sea horses
+  { line: 14, t0: lineStart(14), set: "troy", light: "day", sunAz: 130, sunEl: 40, cam: mv([-20, 3.4, 12], [-16, 3.8, 4], [-6, 4, 2], [-6, 4.6, -4], 56, 50, 0.03, -0.02) },
+  { line: 14, t0: wt(14, "even"), set: "troy", light: "day", sunAz: 130, sunEl: 40, cam: shake(mv([10, 1.8, 8], [7, 2.4, 5], [-4, 6, -22], [-4, 7, -22], 56, 52, 0.0, 0.0)) },
+  { line: 14, t0: wt(14, "since"), set: "camp", light: "golden", sunAz: 160, sunEl: 8, cam: mv([-4.0, 1.6, -31], [-3.2, 2.2, -32], [0, 3.2, -41], [0, 5.2, -41], 58, 54, 0.04, -0.02) },
+  { line: 14, t0: wt(14, "horses"), set: "camp", light: "golden", sunAz: 160, sunEl: 8, cam: mv([-6, 1.3, -33], [5, 1.5, -33], [-12, 1.8, -39.5], [12, 1.8, -39.5], 52, 52, 0.04, -0.04) },
+  { line: 14, t0: wt(14, "earthquakes"), set: "camp", light: "golden", sunAz: 160, sunEl: 8, cam: shake(mv([6, 1.4, -33.5], [3, 1.7, -35], [8, 2.2, -39.5], [8, 2.2, -39.5], 48, 44, -0.04, 0.03), 0.1) },
+  // 15 maybe the walls fell and a story made it a trick
   { line: 15, t0: lineStart(15), set: "troy", light: "day", sunAz: 130, sunEl: 40, cam: shake(mv([-12, 3.0, 9], [-8, 4.2, 4], [-5, 5.5, -22], [-5, 4.5, -22], 56, 52, -0.04, 0.03), 0.09) },
+  { line: 15, t0: wt(15, "story"), set: "troy", light: "golden", sunAz: 150, sunEl: 12, cam: mv([-3.0, 1.5, 2.4], [-1.8, 1.7, 1.6], [-0.4, 1.8, -1.0], [-0.4, 2.2, -1.0], 40, 36, 0.04, -0.02) },
   { line: 15, t0: wt(15, "trick"), set: "troy", light: "golden", sunAz: 150, sunEl: 12, cam: mv([2.5, 1.0, 0.6], [1.5, 1.6, -3.0], [0, 3.6, -14], [0, 3.8, -14], 44, 42, 0.04, -0.02) },
-  // 16 the lesson
-  { line: 16, t0: lineStart(16), set: "troy", light: "golden", sunAz: 160, sunEl: 7, cam: mv([0, 2.0, 24], [0, 2.4, 14], [0, 5, -18], [0, 5.5, -20], 46, 42, -0.02, 0.02) },
+  // 16 the lesson: the Trojans celebrate around the horse
+  { line: 16, t0: lineStart(16), set: "troy", light: "golden", sunAz: 160, sunEl: 7, cam: mv([-9, 1.8, 6], [-5, 2.0, 2.0], [0, 3.0, -8], [0, 3.4, -10], 54, 48, 0.04, -0.02) },
+  { line: 16, t0: wt(16, "same"), set: "troy", light: "golden", sunAz: 160, sunEl: 7, cam: mv([0.4, 0.7, -2.0], [0.2, 1.3, -4.4], [0, 3.2, -8.0], [0, 3.6, -8.0], 50, 44, 0.0, 0.04) },
   // 17 the strongest walls mean nothing if you let the enemy in yourself
   { line: 17, t0: lineStart(17), set: "troy", light: "golden", sunAz: 160, sunEl: 7, cam: mv([-12, 1.0, 14], [-6, 1.4, 6], [-6, 7, -22], [-4, 8, -22], 58, 54, 0.05, -0.02) },
-  { line: 17, t0: wt(17, "enemy"), set: "troy", light: "night", sunAz: 150, sunEl: 40, cam: mv([0, 2.0, -30], [0, 2.6, -24], [0, 3.2, PLAZA_Z], [0, 3.6, -50], 50, 44, 0.0, 0.0) },
+  { line: 17, t0: wt(17, "nothing"), set: "troy", light: "night", sunAz: 150, sunEl: 40, cam: mv([0, 2.0, -30], [0, 2.4, -34], [0, 3.2, -44], [0, 3.4, -44], 50, 46, 0.0, 0.0) },
+  { line: 17, t0: wt(17, "enemy"), set: "troy", light: "night", sunAz: 150, sunEl: 40, cam: mv([4.5, 1.4, -48.5], [3.4, 1.8, -47.5], [0, 1.2, -44.2], [0, 1.0, -44.2], 48, 44, 0.04, -0.03) },
+  { line: 17, t0: wt(17, "yourself"), set: "troy", light: "night", sunAz: 150, sunEl: 40, cam: mv([0, 2.6, -33], [0, 14, -14], [0, 3.4, -44], [0, 5, -50], 52, 60, 0.0, 0.0) },
 ];
 const starts = SPEC.map((s, i) => (i === 0 ? 0 : Math.max(F(s.t0), 1)));
 for (let i = 1; i < starts.length; i++) starts[i] = Math.max(starts[i], starts[i - 1] + 8); // a shot is never shorter than 8 frames

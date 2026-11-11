@@ -354,93 +354,142 @@ const s8 = (cam: CamInfo, t: number, out: Stage, sub: number) => {
   for (let i = 0; i < 12; i++) gk(cam, t, out, i, -9 + (i % 6) * 3.2, 0, -28 - Math.floor(i / 6) * 3, "grin", { mode: "march", phase: q((t * 1.1 + i * 0.2) % 1, 10), wave: 0.5 });
   if (sub === 1) for (let i = 0; i < 4; i++) tj(cam, t, out, i, -12 + i * 1.8, 0, -44 + (i % 2) * 2, "shock", { mode: "march", phase: q((t * 1.6 + i * 0.3) % 1, 10) });
 };
-// ---- 9 Homer ----
+const confetti = (out: Stage, t: number, n: number, cx: number, cz: number, spread: number, top: number, rate = 0.3) => {
+  for (let i = 0; i < n; i++) {
+    const ph = ((t * (rate + 0.2 * hh(i, 1)) + hh(i, 2)) % 1 + 1) % 1;
+    sv(out, { k: "conf", x: cx + (hh(i, 3) - 0.5) * spread + 0.3 * Math.sin(t * 3 + i), y: top - ph * top, z: cz + (hh(i, 4) - 0.5) * spread * 0.5, pitch: t * (2 + hh(i, 5) * 3) + i, roll: t * 3 + i * 2, yaw: i, s: 1 + top / 14 });
+  }
+};
+const fxNoHorse = (p: Pen) => {
+  [[110, 140, 90], [230, 100, 105], [350, 140, 90], [230, 190, 120], [130, 210, 70], [330, 215, 75]].forEach(([x, y, r]) => p.ell(x, y, r, r * 0.8, "#ffffff", 9));
+  [[110, 140, 90], [230, 100, 105], [350, 140, 90], [230, 190, 120], [130, 210, 70], [330, 215, 75]].forEach(([x, y, r]) => p.ell(x, y, r * 0.95, r * 0.76, "#ffffff", 0));
+  p.ell(210, 150, 62, 34, "#8a5a2a", 6); p.stroke([[246, 140], [292, 92], [318, 100]], 24, "#8a5a2a"); p.ell(320, 98, 26, 17, "#8a5a2a", 6);
+  for (const x of [172, 188, 238, 252]) p.stroke([[x, 170], [x, 220]], 12, "#8a5a2a");
+  p.stroke([[130, 60], [330, 250]], 26, "#241726"); p.stroke([[130, 60], [330, 250]], 14, "#d6453b"); p.stroke([[330, 60], [130, 250]], 26, "#241726"); p.stroke([[330, 60], [130, 250]], 14, "#d6453b");
+  p.ell(60, 300, 20, 18, "#ffffff", 7); p.ell(28, 340, 11, 10, "#ffffff", 6);
+};
+const sitG = (cam: CamInfo, t: number, out: Stage, i: number, x: number, z: number, expr: Expr) => out.places.push(person(cam, { i: 10 + i, o: GREEK, okey: "greek" }, x, 0.05, z, FRONT, { mode: "sit", expr, blink: lidAt(t, i) }, {}, 1));
+const ROM = (v: number): Outfit => ({ jacket: ["#f4f0e6", "#efe3c8", "#e8dcc0"][v % 3], pants: "#c9b88a", boots: "#6a4a30", hat: "hair", hair: ["#3a2a22", "#6a4a30", "#1c130e"][v % 3], skin: SKINS[v % 4], sash: ["#8a3a9a", "#c0392f", "#3f6fb5"][v % 3] });
+const rm = (cam: CamInfo, t: number, out: Stage, i: number, x: number, y: number, z: number, expr: Expr, extra: Partial<FrontOpts> = {}) => ch(cam, t, out, ROM(i), "rom" + (i % 3), 50 + i, x, y, z, { expr, ...extra });
+const rocks = (out: Stage, tq: number, n: number, x0: number, x1: number, z: number, topY = 10) => { for (let i = 0; i < n; i++) { const k = ((tq * 0.7 + i * 0.137) % 1 + 1) % 1, x = lip(x0, x1, hh(i, 3)); sv(out, { k: "rock", x, y: Math.max(0.1, topY - topY * k * k), z: z + 1.5 * k + 0.6 * Math.sin(i), s: 0.8 + 0.5 * hh(i, 5), pitch: tq * 4 + i, roll: tq * 3 + i * 2, yaw: i }); } };
+// ---- 9 Homer at the Greek campfire ----
 const s9 = (cam: CamInfo, t: number, out: Stage, sub: number) => {
-  ch(cam, t, out, HOMER, "homer", 5, 1.8, 0, 4.0, { expr: sub === 0 ? "neutral" : "sad", prop: "scroll", shrug: sub === 1 ? easeOutS((t - wt(9, "never") + 0.1) / 0.4) : 0 });
-  if (sub === 1) qmark(out, t, 1.8, 2.9, 4.0, 1.5);
-  for (let i = 0; i < 6; i++) { const ph = ((t * 0.3 + i / 6) % 1); sv(out, { k: "spark", x: 1.8 + Math.sin(i * 2.3) * 4, y: 1 + 3 * ph, z: 4 + Math.cos(i * 1.7) * 3, s: 1.0 * (1 - ph) }); }
+  const F0: V3 = [2, 0, 4];
+  sv(out, { k: "fire", x: F0[0], y: 0.1, z: F0[2], s: 1, a: 1.9, b: t * 7 });
+  soft(out, "255,150,60", 0.6, F0[0], 1.2, F0[2], 6);
+  for (let i = 0; i < 9; i++) { const a = (i / 9) * Math.PI * 2 + 0.4; if (Math.sin(a) < -0.5 && 0) continue; sitG(cam, t, out, i, F0[0] + Math.cos(a) * 3.0, F0[2] + Math.sin(a) * 3.0 * 0.8 - 0.4, sub === 2 ? (i % 2 ? "sad" : "curious") : "smile"); }
+  ch(cam, t, out, HOMER, "homer", 5, 2, 0, 6.8, { expr: sub === 2 ? "neutral" : "smile", prop: "scroll", wave: 0.5 });
+  if (sub === 2) { const k = easeOutS((t - wt(9, "never")) / 0.35); fxp(out, "noHorse", 460, 360, fxNoHorse, 2.2, 3.1, 3.0, 2.4 * k, 1.9 * k); }
+  for (let i = 0; i < 8; i++) { const ph = ((t * 0.3 + i / 8) % 1); sv(out, { k: "spark", x: 2 + Math.sin(i * 2.3 + t) * 1.6, y: 0.6 + 3.5 * ph, z: 4 + Math.cos(i * 1.7) * 1.6, s: 1.1 * (1 - ph) }); }
+  tj(cam, t, out, 4, -9, 0, -2, "smile", { mode: "stand" }); void sub;
 };
-// ---- 10 Virgil, twelve hundred years ----
+// ---- 10 Virgil on the temple steps ----
 const s10 = (cam: CamInfo, t: number, out: Stage, sub: number) => {
-  ch(cam, t, out, VIRGIL, "virgil", 6, -5.6, 0, 16.0, { expr: "smile", prop: "scroll" });
-  const k = smooth((t - lineStart(10)) / (lineEnd(10) - lineStart(10)));
-  sv(out, { k: "candle", x: -4.4, y: 0, z: 16.6, s: 0.9, a: 1 - 0.85 * k, b: t });
-  soft(out, "255,190,90", 0.55, -4.4, 1.0, 16.6, 2.4);
-  for (let i = 0; i < 8; i++) { const ph = ((t * 0.25 + i / 8) % 1); sv(out, { k: "spark", x: -5 + Math.sin(i * 2.3 + t) * 1.6, y: 0.8 + 2.2 * ph, z: 16 + Math.cos(i * 1.9) * 1.2, s: 0.9 * (1 - ph) }); }
-  void sub;
+  const V0: V3 = [0, 0, -66], t0 = lineStart(10), k = smooth((t - t0) / (lineEnd(10) - t0));
+  ch(cam, t, out, VIRGIL, "virgil", 6, V0[0], V0[1], V0[2], { expr: sub === 3 ? "grin" : "smile", prop: "scroll", wave: sub === 3 ? 1 : 0 });
+  sv(out, { k: "candle", x: -1.3, y: 0, z: -65, s: 0.9, a: sub >= 2 ? 0.55 - 0.4 * clamp01((t - wt(10, "twelve")) / 1.2) : 1 - 0.4 * k, b: t });
+  soft(out, "255,190,90", 0.55, -1.3, 0.9, -65, 2.6);
+  for (let i = 0; i < 8; i++) rm(cam, t, out, i, i < 4 ? -8 + i * 1.5 : 3.8 + (i - 4) * 1.5, 0, -61 - (i % 2) * 1.3, i % 3 === 0 ? "laugh" : "smile", { wave: sub === 1 ? 0.8 : 0.2 });
+  for (const [x, z] of [[-5.5, -65], [5.5, -65]]) torch(out, t, x, 0, z);
+  for (let i = 0; i < 10; i++) { const ph = ((t * 0.25 + i / 10) % 1); sv(out, { k: "spark", x: Math.sin(i * 2.3 + t) * 2.2, y: 1.8 + 3 * ph, z: -66 + Math.cos(i * 1.9) * 1.2, s: 1.0 * (1 - ph) }); }
 };
-// ---- 11 the dig ----
+// ---- 11 the busy dig ----
+const dig = (cam: CamInfo, t: number, out: Stage, sub: number) => {
+  const wk: [number, number, number][] = [[-4.5, -2.0, -11.2], [-1.6, -2.0, -9.6], [1.6, -2.0, -11.3], [4.6, -2.0, -9.8]];
+  wk.forEach(([x, y, z], i) => ch(cam, t, out, DIGGER, "dig", 7 + i, x, y, z + 0.2 * Math.sin(t * 5 + i), { expr: sub === 3 ? "shock" : i % 2 ? "tired" : "smile", prop: "trowel", wave: 0.3 }));
+  for (let i = 0; i < 5; i++) { const ph = ((t * 0.9 + i * 0.21) % 1); sv(out, { k: "spark", x: wk[i % 4][0] + 0.4, y: -0.6 + 1.2 * ph, z: wk[i % 4][2] + 0.5, s: 0.5 * (1 - ph) }); }
+};
 const s11 = (cam: CamInfo, t: number, out: Stage, sub: number) => {
-  ch(cam, t, out, DIGGER, "dig", 7, -2.2, -2.0, -9.2, { expr: "smile", prop: "trowel", mode: "stand" } as never);
-  ch(cam, t, out, DIGGER, "dig", 8, 2.6, -2.0, -10.6, { expr: sub === 2 ? "shock" : "tired", prop: "trowel" });
-  ch(cam, t, out, BOSS, "boss", 9, 0.4, 0, 1.0, { expr: sub === 2 ? "shock" : "smile", prop: "clipboard" });
-  ch(cam, t, out, DIGGER, "dig", 11, -9, 0, 6.0, { expr: "smile", prop: "trowel" });
-  if (sub === 2) { for (let i = 0; i < 6; i++) { const ph = ((t * 0.5 + i / 6) % 1); sv(out, { k: "dsmoke", x: -3 + i * 1.2, y: -0.9 + ph * 1.2, z: -8.5, s: 0.35 + 0.4 * ph }); } soft(out, "255,120,50", 0.3, 0, -0.9, -8.0, 5); }
+  dig(cam, t, out, sub);
+  ch(cam, t, out, BOSS, "boss", 9, 0.4, 0, 1.0, { expr: sub === 3 ? "shock" : "smile", prop: "clipboard" });
+  for (let i = 0; i < 4; i++) ch(cam, t, out, DIGGER, "dig", 20 + i, -9 + i * 5.5, 0, 6.5 + (i % 2) * 2, { expr: "smile", prop: "trowel", mode: "stroll", phase: q((t * 0.7 + i * 0.25) % 1, 10) } as never);
+  if (sub === 3) { for (let i = 0; i < 9; i++) { fire(out, t, -6 + i * 1.5, -1.9, -9.5 + 0.7 * Math.sin(i), 1.6 + hz(i)); } for (let i = 0; i < 6; i++) { const ph = ((t * 0.5 + i / 6) % 1); sv(out, { k: "dsmoke", x: -5 + i * 2, y: -0.9 + ph * 3, z: -9, s: 0.4 + 0.6 * ph }); } soft(out, "255,120,50", 0.4, 0, -0.8, -8.5, 10); }
 };
 // ---- 12 nobody found a horse ----
 const s12 = (cam: CamInfo, t: number, out: Stage, sub: number) => {
-  ch(cam, t, out, BOSS, "boss", 9, sub === 0 ? 1.4 : 0.0, 0, sub === 0 ? 0.8 : 1.0, { expr: sub === 0 ? "curious" : "sad", prop: sub === 0 ? "clipboard" : null, shrug: sub === 1 ? 1 : 0 });
-  ch(cam, t, out, DIGGER, "dig", 7, -2.2, -2.0, -9.2, { expr: "curious", prop: "trowel" });
-  ch(cam, t, out, DIGGER, "dig", 8, 2.6, -2.0, -10.6, { expr: "sad", prop: "trowel" });
-  if (sub === 1) qmark(out, t, 0.0, 2.9, 1.0, 1.6);
+  dig(cam, t, out, 0);
+  ch(cam, t, out, BOSS, "boss", 9, sub === 0 ? 0.4 : 0.4, 0, 1.0, { expr: sub === 0 ? "curious" : "sad", prop: sub === 0 ? "clipboard" : null, shrug: sub === 1 ? 1 : 0 });
+  const k = easeOutS((t - lineStart(12) - 0.3) / 0.4);
+  fxp(out, "noHorse", 460, 360, fxNoHorse, 0.4, 4.3, 1.0, 2.6 * k, 2.0 * k);
+  for (let i = 0; i < 4; i++) ch(cam, t, out, DIGGER, "dig", 20 + i, -9 + i * 5.5, 0, 6.5 + (i % 2) * 2, { expr: "sad", prop: "trowel" });
 };
-// ---- 13 where did it come from ----
+// ---- 13 where did the story come from ----
 const s13 = (cam: CamInfo, t: number, out: Stage, sub: number) => {
-  ch(cam, t, out, BOSS, "boss", 9, -1.0, 0, 2.5, { expr: "curious", prop: "point" });
-  qmark(out, t, -1.0 - 0.4, 3.0, 2.5, 1.9); qmark(out, t + 0.4, -1.9, 2.4, 2.6, 1.2); qmark(out, t + 0.8, -0.2, 2.5, 2.4, 1.0);
-  ch(cam, t, out, DIGGER, "dig", 7, 2.2, 0, 1.6, { expr: "curious", prop: "trowel" });
+  dig(cam, t, out, 0);
+  ch(cam, t, out, BOSS, "boss", 9, -0.4, 0, 2.5, { expr: "curious", prop: "point" });
+  for (let i = 0; i < 3; i++) ch(cam, t, out, DIGGER, "dig", 20 + i, -3.2 + i * 3.0, 0, 3.6 + (i % 2) * 0.8, { expr: "curious", prop: "trowel", wave: 0.3 });
+  qmark(out, t, -0.8, 3.3, 2.5, 1.9); qmark(out, t + 0.4, -3.2, 3.0, 3.6, 1.3); qmark(out, t + 0.8, 2.6, 3.0, 4.4, 1.3); qmark(out, t + 1.2, 0.2, 3.8, 3.5, 1.0);
   void sub;
 };
-// ---- 14 siege machine, earthquake, Poseidon ----
+// ---- 14 siege machine / quake / Poseidon and his sea horses ----
 const s14 = (cam: CamInfo, t: number, out: Stage, sub: number) => {
   if (sub === 0) {
-    const zT = lip(8, -9, smooth((t - lineStart(14)) / (wt(14, "earthquake") - lineStart(14))));
+    const zT = lip(8, -9, smooth((t - lineStart(14)) / (wt(14, "even") - lineStart(14))));
     sv(out, { k: "stower", x: -6, y: 0, z: zT, s: 1.35, yaw: 0 });
-    for (let i = 0; i < 6; i++) gk(cam, t, out, i, -9.5 + i * 1.3 + (i % 2) * 0.4, 0, zT + 3.2 + (i % 3) * 1.4, "pained", { mode: "march", phase: q((t * 1.4 + i * 0.16) % 1, 10), tilt: 0.1 });
-    dust(out, t, -7.5, zT + 2.2, 5); sentries(cam, t, out, "shock"); return;
+    for (let i = 0; i < 6; i++) gk(cam, t, out, i, -9.5 + i * 1.3 + (i % 2) * 0.4, 0, zT + 3.6 + (i % 3) * 1.4, "pained", { mode: "march", phase: q((t * 1.4 + i * 0.16) % 1, 10), tilt: 0.1 });
+    dust(out, t, -7.5, zT + 2.4, 5); sentries(cam, t, out, "shock"); return;
   }
   if (sub === 1) {
-    const tq = t - wt(14, "earthquake");
-    for (let i = 0; i < 18; i++) { const k = ((tq * 0.9 + i * 0.173) % 1 + 1) % 1; sv(out, { k: "shard", x: -9 + (i % 9) * 2.1, y: 12 - 12 * k * k, z: -20.3 + 0.5 * Math.sin(i), s: 0.8, pitch: tq * 5 + i, roll: tq * 3 + i }); }
-    for (let i = 0; i < 10; i++) { const k = ((tq * 0.4 + i / 10) % 1 + 1) % 1; sv(out, { k: "smoke", x: -10 + i * 1.9, y: 0.5 + k * 5, z: -19 + 0.6 * Math.sin(i), s: 0.8 + k * 1.8 }); }
-    for (let i = 0; i < 5; i++) tj(cam, t, out, i, 2 + i * 2, 0, 2 + 3 * Math.sin(i), "shock", { mode: "march", phase: q((t * 2.2 + i * 0.2) % 1, 10) });
+    const tq = t - wt(14, "even");
+    rocks(out, tq, 26, -10, 4, -20.6);
+    for (let i = 0; i < 10; i++) { const k = ((tq * 0.4 + i / 10) % 1 + 1) % 1; sv(out, { k: "smoke", x: -10 + i * 1.5, y: 0.5 + k * 5, z: -19 + 0.6 * Math.sin(i), s: 0.8 + k * 1.8 }); }
+    for (let i = 0; i < 7; i++) tj(cam, t, out, i, -4 + i * 2.6, 0, 4 + 3 * Math.sin(i * 1.3), "shock", { mode: "march", phase: q((t * 2.2 + i * 0.2) % 1, 10) });
     sentries(cam, t, out, "shock"); return;
   }
-  const tp = wt(14, "poseidon");
-  ch(cam, t, out, POSEIDON, "poseidon", 8, 0, 0, -37.5, { expr: sub === 2 ? "stern" : "laugh", prop: "spear", wave: 0.3 }, 3.0);
-  soft(out, "120,220,255", 0.35 * clamp01((t - tp) / 0.4), 0, 3, -38.5, 16);
-  if (sub === 3) { horse(out, -31, 0, 1.0, 8, 0.6); for (let i = 0; i < 12; i++) { const a = i * 0.9 + t * 1.2; sv(out, { k: "spark", x: Math.cos(a) * 6, y: 0.4 + 0.4 * Math.sin(t * 3 + i), z: -37.5 + Math.sin(a) * 6, s: 1.4 }); } }
+  const tp = wt(14, "since"), te = wt(14, "horses");
+  if (sub === 2) {
+    const k = easeOutS((t - tp) / 1.0);
+    ch(cam, t, out, POSEIDON, "poseidon", 8, 0, lip(-3.2, 0, k), -41, { expr: "stern", prop: "spear", wave: 0.3 }, 3.6);
+    soft(out, "120,220,255", 0.4 * k, 0, 4, -42, 18);
+    return;
+  }
+  const kx = lip(-12, 12, smooth((t - te) / (wt(14, "earthquakes") + 1.4 - te)));
+  for (const dz of [-1.5, 1.5]) sv(out, { k: "horse", x: kx - 1.0, y: 0.15 * Math.abs(Math.sin(t * 9 + dz)), z: -39.5 + dz * 0.9, s: 0.9, yaw: -Math.PI / 2, a: 0 });
+  ch(cam, t, out, POSEIDON, "poseidon", 8, kx - 4.6, 1.3, -39.5, { expr: "laugh", prop: "spear", wave: 0.6 }, 2.2);
+  if (sub === 4) { const tq = t - wt(14, "earthquakes"); for (let i = 0; i < 14; i++) { const ph = ((tq * 0.8 + i / 14) % 1); sv(out, { k: "rock", x: 8 + Math.cos(i * 1.9) * 5, y: 1.2 * ph * (1 - ph) * 4, z: -38 + Math.sin(i * 1.3) * 3, s: 0.3 + 0.2 * hh(i, 4), pitch: tq * 5 + i, roll: tq * 4, yaw: i }); } for (let i = 0; i < 8; i++) sv(out, { k: "smoke", x: 8 + (i - 4) * 1.2, y: 0.4 + 0.8 * ((tq * 0.6 + i / 8) % 1), z: -41, s: 0.35 }); }
 };
-// ---- 15 the walls fell ----
+// ---- 15 the walls fell; the story turned it into a trick ----
 const s15 = (cam: CamInfo, t: number, out: Stage, sub: number) => {
   if (sub === 0) {
     const tq = t - lineStart(15);
-    for (let i = 0; i < 24; i++) { const k = ((tq * 0.8 + i * 0.131) % 1 + 1) % 1; sv(out, { k: "shard", x: -10 + (i % 8) * 1.8, y: 11 - 11 * k * k, z: -20.2 + 0.5 * Math.sin(i), s: 1.0, pitch: tq * 4 + i, roll: tq * 3 + i }); }
-    for (let i = 0; i < 12; i++) { const k = ((tq * 0.5 + i / 12) % 1 + 1) % 1; sv(out, { k: "dsmoke", x: -10 + i * 1.7, y: 0.5 + k * 7, z: -19 + 0.6 * Math.sin(i), s: 1.0 + k * 2.4 }); }
-    for (let i = 0; i < 9; i++) gk(cam, t, out, i, -9 + i * 2.0, 0, -4 - 8 * smooth(tq / 1.5 + 0.1 * i), "stern", { mode: "march", phase: q((t * 1.4 + i * 0.2) % 1, 10) });
+    rocks(out, tq, 40, -11, 3, -20.6, 11);
+    for (let i = 0; i < 12; i++) { const k = ((tq * 0.5 + i / 12) % 1 + 1) % 1; sv(out, { k: "dsmoke", x: -10 + i * 1.5, y: 0.5 + k * 7, z: -19 + 0.6 * Math.sin(i), s: 1.2 + k * 2.4 }); }
+    for (let i = 0; i < 10; i++) gk(cam, t, out, i, -9 + i * 1.8, 0, -3 - 9 * smooth(tq / 1.5 + 0.05 * i), "stern", { mode: "march", phase: q((t * 1.4 + i * 0.2) % 1, 10) });
     return;
   }
-  horse(out, -12, 0);
-  ch(cam, t, out, SINON, "sinon", 3, -2.0, 0, -7.0, { expr: "grin", prop: "point" });
-  soft(out, "255,210,110", 0.5, 0, 4, -12, 8);
+  horse(out, -8, 0);
+  if (sub === 1) {
+    ch(cam, t, out, SINON, "sinon", 3, -0.6, 0, -1.2, { expr: "grin", prop: "point", wave: 0.6 });
+    for (let i = 0; i < 6; i++) tj(cam, t, out, i, -4 + i * 1.6, 0, 1.4 - 0.4 * (i % 2), i % 2 ? "smile" : "curious", {});
+    const k = easeOutS((t - wt(15, "story")) / 0.5); soft(out, "255,210,110", 0.5 * k, -0.4, 3.0, -2.0, 4.4);
+    return;
+  }
+  ch(cam, t, out, SINON, "sinon", 3, -2.2, 0, -4.5, { expr: "grin", prop: "point" });
+  soft(out, "255,210,110", 0.5, 0, 4, -9, 8);
+  for (let i = 0; i < 3; i++) tj(cam, t, out, i, -3 + i * 3, 0, 2.5, "smile", {});
 };
-// ---- 16 the lesson ----
+// ---- 16 the lesson: celebration around the horse ----
 const s16 = (cam: CamInfo, t: number, out: Stage, sub: number) => {
-  horse(out, -19, 0);
-  sv(out, { k: "gate", x: 0, y: 0, z: -22, s: 1, a: 1.35 });
-  for (let i = 0; i < 4; i++) tj(cam, t, out, i, -6 + i * 4, 0, 2 + (i % 2), "smile", { mode: "stand" });
-  sentries(cam, t, out, "smile"); soft(out, "255,190,110", 0.5, 0, 6, -24, 22);
+  horse(out, -8, 0);
+  for (let i = 0; i < 10; i++) { const a = (i / 10) * Math.PI + 0.1, x = Math.cos(a) * 6.0, z = -3 + Math.sin(a) * 4.6; tj(cam, t, out, i + 1, x, 0, z, i % 2 ? "laugh" : "grin", { wave: 1, mode: "dance", phase: q((t * 1.3 + i * 0.17) % 1, 10) } as never); }
+  for (const [x, z] of [[-4, -1], [4, -1], [-6, 3], [6, 3]]) torch(out, t, x, 0, z);
+  confetti(out, t, 28, 0, -2, 12, 9, 0.3); soft(out, "255,190,110", 0.5, 0, 6, -8, 20); sentries(cam, t, out, "laugh");
   void sub;
 };
-// ---- 17 enemy inside ----
+// ---- 17 the enemy let in ----
+const pour = (cam: CamInfo, t: number, out: Stage, zh: number, t0: number, n: number) => {
+  const hy = 1.66 * ST.HORSE_S, hz0 = zh + 1.05 * ST.HORSE_S, rz = zh + 2.6;
+  sv(out, { k: "rope", x: 0.25, y: hy, z: hz0, a: 0.25, b: 0.1, c: rz });
+  for (let i = 0; i < n; i++) { const s0 = t0 + i * 0.3, k = clamp01((t - s0) / 0.8), e = easeOutS(k), m = smooth((t - s0 - 0.8) / 1.6); if (t < s0) continue; gk(cam, t, out, i, lip(0.25, -4.5 + i * 1.35, m), lip(hy - 0.4, 0, e), lip(hz0, rz + 1.2 * (i % 3), e) + 0.0, i % 2 ? "stern" : "grin", {}, 1); }
+};
 const s17 = (cam: CamInfo, t: number, out: Stage, sub: number) => {
-  if (sub === 0) { horse(out, -21, 0); sv(out, { k: "gate", x: 0, y: 0, z: -22, s: 1, a: 1.35 }); for (let i = 0; i < 5; i++) tj(cam, t, out, i, -8 + i * 4, 0, 1 + (i % 2) * 1.5, "smile", {}); sentries(cam, t, out, "smile"); return; }
+  if (sub === 0) { horse(out, -21, 0); sv(out, { k: "gate", x: 0, y: 0, z: -22, s: 1, a: 1.35 }); for (let i = 0; i < 6; i++) tj(cam, t, out, i, -9 + i * 3.6, 0, 3 + (i % 2) * 1.5, "smile", { mode: "dance", phase: q((t * 1.0 + i * 0.2) % 1, 10) } as never); sentries(cam, t, out, "smile"); return; }
   const zh = ST.PLAZA_Z, a = 0.85;
   horse(out, zh, a); sv(out, { k: "gate", x: 0, y: 0, z: -22, s: 1, a: 1.35 });
-  sv(out, { k: "rope", x: 0.25, y: 1.66 * ST.HORSE_S, z: zh + 1.31, a: 0.25, b: 0.1, c: zh + 2.4 });
   for (const [x, z] of [[-7, zh + 6], [7, zh + 6], [-8, zh - 5], [8, zh - 5]]) torch(out, t, x, 0, z);
-  for (let i = 0; i < 6; i++) tj(cam, t, out, i + 3, -8 + i * 3.1, 0, zh + 15 + (i % 2), "sleep", { mode: "sit" } as never);
-  for (let i = 0; i < 7; i++) gk(cam, t, out, i, -5 + i * 1.7, 0, zh + 4.5 - ((t - wt(17, "enemy")) * 0.5 + i * 0.3) % 3 * 0.4 + (i % 2) * 2, "stern", { mode: "march", phase: q((t * 1.0 + i * 0.2) % 1, 10) });
+  for (let i = 0; i < 6; i++) tj(cam, t, out, i + 3, -8 + i * 3.1, 0, zh + 17 + (i % 2), "sleep", { mode: "sit" } as never);
+  pour(cam, t, out, zh, wt(17, "let") - 0.1, 8);
+  if (sub === 3) { const k = smooth((t - wt(17, "yourself")) / 1.6); [[-16, 7, -40], [18, 8, -45], [-18, 7, -66], [20, 8, -78], [-28, 8, -52]].forEach(([x, y, z], i) => { fire(out, t, x, y, z, k * (4 + hz(i) * 3)); soft(out, "255,120,40", 0.5 * k, x, y + 1, z + 3, 9); smokeCol(out, t + i, x, y + 1, z, 3, 1.2 * k); }); }
 };
 
 export const stage = (id: number, t: number, f: number, cam: CamInfo): Stage => {
