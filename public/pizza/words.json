@@ -1,0 +1,1392 @@
+[
+ {
+  "word": "he",
+  "start": 0.0,
+  "end": 0.12,
+  "line": 1
+ },
+ {
+  "word": "paid",
+  "start": 0.12,
+  "end": 0.48,
+  "line": 1
+ },
+ {
+  "word": "ten",
+  "start": 0.48,
+  "end": 0.84,
+  "line": 1,
+  "num": "10,000",
+  "grp": 1
+ },
+ {
+  "word": "thousand",
+  "start": 0.84,
+  "end": 1.34,
+  "line": 1,
+  "num": "10,000",
+  "grp": 1
+ },
+ {
+  "word": "bitcoin",
+  "start": 1.34,
+  "end": 1.93,
+  "line": 1
+ },
+ {
+  "word": "for",
+  "start": 2.15,
+  "end": 2.25,
+  "line": 1
+ },
+ {
+  "word": "two",
+  "start": 2.25,
+  "end": 2.59,
+  "line": 1,
+  "num": "2",
+  "grp": 2
+ },
+ {
+  "word": "pizzas",
+  "start": 2.59,
+  "end": 3.27,
+  "line": 1
+ },
+ {
+  "word": "today",
+  "start": 3.55,
+  "end": 4.03,
+  "line": 1
+ },
+ {
+  "word": "those",
+  "start": 4.25,
+  "end": 4.46,
+  "line": 1
+ },
+ {
+  "word": "pizzas",
+  "start": 4.46,
+  "end": 4.8,
+  "line": 1
+ },
+ {
+  "word": "would",
+  "start": 4.8,
+  "end": 4.89,
+  "line": 1
+ },
+ {
+  "word": "be",
+  "start": 4.89,
+  "end": 4.99,
+  "line": 1
+ },
+ {
+  "word": "worth",
+  "start": 4.99,
+  "end": 5.25,
+  "line": 1
+ },
+ {
+  "word": "over",
+  "start": 5.25,
+  "end": 5.46,
+  "line": 1
+ },
+ {
+  "word": "seven",
+  "start": 5.46,
+  "end": 5.87,
+  "line": 1,
+  "num": "700",
+  "grp": 3
+ },
+ {
+  "word": "hundred",
+  "start": 5.87,
+  "end": 6.23,
+  "line": 1,
+  "num": "700",
+  "grp": 3
+ },
+ {
+  "word": "million",
+  "start": 6.23,
+  "end": 6.73,
+  "line": 1
+ },
+ {
+  "word": "dollars",
+  "start": 6.73,
+  "end": 7.36,
+  "line": 1
+ },
+ {
+  "word": "it's",
+  "start": 7.92,
+  "end": 8.08,
+  "line": 2
+ },
+ {
+  "word": "may",
+  "start": 8.08,
+  "end": 8.34,
+  "line": 2
+ },
+ {
+  "word": "twenty",
+  "start": 8.34,
+  "end": 8.66,
+  "line": 2,
+  "num": "2010",
+  "grp": 4
+ },
+ {
+  "word": "ten",
+  "start": 8.66,
+  "end": 8.98,
+  "line": 2,
+  "num": "2010",
+  "grp": 4
+ },
+ {
+  "word": "a",
+  "start": 9.42,
+  "end": 9.48,
+  "line": 2
+ },
+ {
+  "word": "programmer",
+  "start": 9.48,
+  "end": 9.95,
+  "line": 2
+ },
+ {
+  "word": "named",
+  "start": 9.95,
+  "end": 10.18,
+  "line": 2
+ },
+ {
+  "word": "laszlo",
+  "start": 10.18,
+  "end": 10.71,
+  "line": 2
+ },
+ {
+  "word": "is",
+  "start": 10.71,
+  "end": 10.8,
+  "line": 2
+ },
+ {
+  "word": "sitting",
+  "start": 10.8,
+  "end": 11.07,
+  "line": 2
+ },
+ {
+  "word": "at",
+  "start": 11.07,
+  "end": 11.16,
+  "line": 2
+ },
+ {
+  "word": "home",
+  "start": 11.16,
+  "end": 11.4,
+  "line": 2
+ },
+ {
+  "word": "in",
+  "start": 11.4,
+  "end": 11.49,
+  "line": 2
+ },
+ {
+  "word": "florida",
+  "start": 11.49,
+  "end": 12.01,
+  "line": 2
+ },
+ {
+  "word": "and",
+  "start": 12.21,
+  "end": 12.36,
+  "line": 2
+ },
+ {
+  "word": "he's",
+  "start": 12.36,
+  "end": 12.51,
+  "line": 2
+ },
+ {
+  "word": "hungry",
+  "start": 12.51,
+  "end": 12.93,
+  "line": 2
+ },
+ {
+  "word": "he",
+  "start": 13.38,
+  "end": 13.46,
+  "line": 3
+ },
+ {
+  "word": "has",
+  "start": 13.46,
+  "end": 13.66,
+  "line": 3
+ },
+ {
+  "word": "thousands",
+  "start": 13.66,
+  "end": 14.22,
+  "line": 3
+ },
+ {
+  "word": "of",
+  "start": 14.22,
+  "end": 14.32,
+  "line": 3
+ },
+ {
+  "word": "bitcoin",
+  "start": 14.32,
+  "end": 14.77,
+  "line": 3
+ },
+ {
+  "word": "because",
+  "start": 14.77,
+  "end": 15.26,
+  "line": 3
+ },
+ {
+  "word": "back",
+  "start": 15.26,
+  "end": 15.48,
+  "line": 3
+ },
+ {
+  "word": "then",
+  "start": 15.48,
+  "end": 15.81,
+  "line": 3
+ },
+ {
+  "word": "his",
+  "start": 16.01,
+  "end": 16.14,
+  "line": 3
+ },
+ {
+  "word": "computer",
+  "start": 16.14,
+  "end": 16.53,
+  "line": 3
+ },
+ {
+  "word": "could",
+  "start": 16.53,
+  "end": 16.67,
+  "line": 3
+ },
+ {
+  "word": "make",
+  "start": 16.67,
+  "end": 16.84,
+  "line": 3
+ },
+ {
+  "word": "them",
+  "start": 16.84,
+  "end": 16.98,
+  "line": 3
+ },
+ {
+  "word": "almost",
+  "start": 16.98,
+  "end": 17.37,
+  "line": 3
+ },
+ {
+  "word": "for",
+  "start": 17.37,
+  "end": 17.47,
+  "line": 3
+ },
+ {
+  "word": "free",
+  "start": 17.47,
+  "end": 17.92,
+  "line": 3
+ },
+ {
+  "word": "but",
+  "start": 18.16,
+  "end": 18.62,
+  "line": 4
+ },
+ {
+  "word": "there's",
+  "start": 18.62,
+  "end": 18.86,
+  "line": 4
+ },
+ {
+  "word": "a",
+  "start": 18.86,
+  "end": 18.91,
+  "line": 4
+ },
+ {
+  "word": "problem",
+  "start": 18.91,
+  "end": 19.45,
+  "line": 4
+ },
+ {
+  "word": "nobody",
+  "start": 19.85,
+  "end": 20.2,
+  "line": 4
+ },
+ {
+  "word": "has",
+  "start": 20.2,
+  "end": 20.44,
+  "line": 4
+ },
+ {
+  "word": "ever",
+  "start": 20.44,
+  "end": 20.68,
+  "line": 4
+ },
+ {
+  "word": "bought",
+  "start": 20.68,
+  "end": 20.95,
+  "line": 4
+ },
+ {
+  "word": "anything",
+  "start": 20.95,
+  "end": 21.41,
+  "line": 4
+ },
+ {
+  "word": "real",
+  "start": 21.41,
+  "end": 21.71,
+  "line": 4
+ },
+ {
+  "word": "with",
+  "start": 21.71,
+  "end": 21.89,
+  "line": 4
+ },
+ {
+  "word": "bitcoin",
+  "start": 21.89,
+  "end": 22.33,
+  "line": 4
+ },
+ {
+  "word": "so",
+  "start": 22.85,
+  "end": 23.17,
+  "line": 5
+ },
+ {
+  "word": "he",
+  "start": 23.17,
+  "end": 23.3,
+  "line": 5
+ },
+ {
+  "word": "posts",
+  "start": 23.3,
+  "end": 23.66,
+  "line": 5
+ },
+ {
+  "word": "an",
+  "start": 23.66,
+  "end": 23.74,
+  "line": 5
+ },
+ {
+  "word": "offer",
+  "start": 23.74,
+  "end": 24.02,
+  "line": 5
+ },
+ {
+  "word": "online",
+  "start": 24.02,
+  "end": 24.47,
+  "line": 5
+ },
+ {
+  "word": "ten",
+  "start": 24.88,
+  "end": 25.14,
+  "line": 5,
+  "num": "10,000",
+  "grp": 5
+ },
+ {
+  "word": "thousand",
+  "start": 25.14,
+  "end": 25.49,
+  "line": 5,
+  "num": "10,000",
+  "grp": 5
+ },
+ {
+  "word": "bitcoin",
+  "start": 25.49,
+  "end": 25.97,
+  "line": 5
+ },
+ {
+  "word": "for",
+  "start": 25.97,
+  "end": 26.13,
+  "line": 5
+ },
+ {
+  "word": "two",
+  "start": 26.13,
+  "end": 26.46,
+  "line": 5,
+  "num": "2",
+  "grp": 6
+ },
+ {
+  "word": "large",
+  "start": 26.46,
+  "end": 26.81,
+  "line": 5
+ },
+ {
+  "word": "pizzas",
+  "start": 26.81,
+  "end": 27.31,
+  "line": 5
+ },
+ {
+  "word": "for",
+  "start": 27.8,
+  "end": 27.88,
+  "line": 6
+ },
+ {
+  "word": "four",
+  "start": 27.88,
+  "end": 28.21,
+  "line": 6,
+  "num": "4",
+  "grp": 7
+ },
+ {
+  "word": "days",
+  "start": 28.21,
+  "end": 28.68,
+  "line": 6
+ },
+ {
+  "word": "no",
+  "start": 28.86,
+  "end": 29.1,
+  "line": 6
+ },
+ {
+  "word": "one",
+  "start": 29.1,
+  "end": 29.28,
+  "line": 6
+ },
+ {
+  "word": "takes",
+  "start": 29.28,
+  "end": 29.53,
+  "line": 6
+ },
+ {
+  "word": "the",
+  "start": 29.53,
+  "end": 29.61,
+  "line": 6
+ },
+ {
+  "word": "deal",
+  "start": 29.61,
+  "end": 29.9,
+  "line": 6
+ },
+ {
+  "word": "luckily",
+  "start": 30.39,
+  "end": 30.96,
+  "line": 7
+ },
+ {
+  "word": "a",
+  "start": 30.96,
+  "end": 31.01,
+  "line": 7
+ },
+ {
+  "word": "nineteen",
+  "start": 31.01,
+  "end": 31.45,
+  "line": 7,
+  "num": "19",
+  "grp": 8
+ },
+ {
+  "word": "year",
+  "start": 31.45,
+  "end": 31.61,
+  "line": 7
+ },
+ {
+  "word": "old",
+  "start": 31.61,
+  "end": 31.75,
+  "line": 7
+ },
+ {
+  "word": "named",
+  "start": 31.75,
+  "end": 31.97,
+  "line": 7
+ },
+ {
+  "word": "jeremy",
+  "start": 31.97,
+  "end": 32.43,
+  "line": 7
+ },
+ {
+  "word": "says",
+  "start": 32.43,
+  "end": 32.71,
+  "line": 7
+ },
+ {
+  "word": "yes",
+  "start": 32.71,
+  "end": 33.11,
+  "line": 7
+ },
+ {
+  "word": "he",
+  "start": 33.51,
+  "end": 33.62,
+  "line": 7
+ },
+ {
+  "word": "orders",
+  "start": 33.62,
+  "end": 33.94,
+  "line": 7
+ },
+ {
+  "word": "two",
+  "start": 33.94,
+  "end": 34.12,
+  "line": 7,
+  "num": "2",
+  "grp": 9
+ },
+ {
+  "word": "pizzas",
+  "start": 34.12,
+  "end": 34.5,
+  "line": 7
+ },
+ {
+  "word": "to",
+  "start": 34.5,
+  "end": 34.6,
+  "line": 7
+ },
+ {
+  "word": "laszlo's",
+  "start": 34.6,
+  "end": 35.04,
+  "line": 7
+ },
+ {
+  "word": "door",
+  "start": 35.04,
+  "end": 35.37,
+  "line": 7
+ },
+ {
+  "word": "and",
+  "start": 35.37,
+  "end": 35.52,
+  "line": 7
+ },
+ {
+  "word": "gets",
+  "start": 35.52,
+  "end": 35.72,
+  "line": 7
+ },
+ {
+  "word": "the",
+  "start": 35.72,
+  "end": 35.8,
+  "line": 7
+ },
+ {
+  "word": "coins",
+  "start": 35.8,
+  "end": 36.31,
+  "line": 7
+ },
+ {
+  "word": "ten",
+  "start": 36.62,
+  "end": 36.93,
+  "line": 8,
+  "num": "10,000",
+  "grp": 10
+ },
+ {
+  "word": "thousand",
+  "start": 36.93,
+  "end": 37.37,
+  "line": 8,
+  "num": "10,000",
+  "grp": 10
+ },
+ {
+  "word": "bitcoin",
+  "start": 37.37,
+  "end": 37.85,
+  "line": 8
+ },
+ {
+  "word": "worth",
+  "start": 38.08,
+  "end": 38.28,
+  "line": 8
+ },
+ {
+  "word": "about",
+  "start": 38.28,
+  "end": 38.52,
+  "line": 8
+ },
+ {
+  "word": "forty",
+  "start": 38.52,
+  "end": 38.78,
+  "line": 8,
+  "num": "41",
+  "grp": 11
+ },
+ {
+  "word": "one",
+  "start": 38.78,
+  "end": 38.98,
+  "line": 8,
+  "num": "41",
+  "grp": 11
+ },
+ {
+  "word": "dollars",
+  "start": 38.98,
+  "end": 39.44,
+  "line": 8
+ },
+ {
+  "word": "for",
+  "start": 39.85,
+  "end": 39.95,
+  "line": 8
+ },
+ {
+  "word": "two",
+  "start": 39.95,
+  "end": 40.13,
+  "line": 8,
+  "num": "2",
+  "grp": 12
+ },
+ {
+  "word": "pizzas",
+  "start": 40.13,
+  "end": 40.81,
+  "line": 8
+ },
+ {
+  "word": "that's",
+  "start": 40.81,
+  "end": 41.01,
+  "line": 8
+ },
+ {
+  "word": "a",
+  "start": 41.01,
+  "end": 41.06,
+  "line": 8
+ },
+ {
+  "word": "fair",
+  "start": 41.06,
+  "end": 41.26,
+  "line": 8
+ },
+ {
+  "word": "trade",
+  "start": 41.26,
+  "end": 41.61,
+  "line": 8
+ },
+ {
+  "word": "unluckily",
+  "start": 42.13,
+  "end": 42.72,
+  "line": 9
+ },
+ {
+  "word": "bitcoin",
+  "start": 42.9,
+  "end": 43.41,
+  "line": 9
+ },
+ {
+  "word": "didn't",
+  "start": 43.41,
+  "end": 43.65,
+  "line": 9
+ },
+ {
+  "word": "stay",
+  "start": 43.65,
+  "end": 43.89,
+  "line": 9
+ },
+ {
+  "word": "cheap",
+  "start": 43.89,
+  "end": 44.3,
+  "line": 9
+ },
+ {
+  "word": "wait",
+  "start": 44.81,
+  "end": 45.31,
+  "line": 10
+ },
+ {
+  "word": "it",
+  "start": 45.59,
+  "end": 45.78,
+  "line": 10
+ },
+ {
+  "word": "gets",
+  "start": 45.78,
+  "end": 45.98,
+  "line": 10
+ },
+ {
+  "word": "worse",
+  "start": 45.98,
+  "end": 46.52,
+  "line": 10
+ },
+ {
+  "word": "laszlo",
+  "start": 46.98,
+  "end": 47.35,
+  "line": 10
+ },
+ {
+  "word": "liked",
+  "start": 47.35,
+  "end": 47.57,
+  "line": 10
+ },
+ {
+  "word": "the",
+  "start": 47.57,
+  "end": 47.64,
+  "line": 10
+ },
+ {
+  "word": "deal",
+  "start": 47.64,
+  "end": 47.86,
+  "line": 10
+ },
+ {
+  "word": "so",
+  "start": 47.86,
+  "end": 48.18,
+  "line": 10
+ },
+ {
+  "word": "much",
+  "start": 48.18,
+  "end": 48.6,
+  "line": 10
+ },
+ {
+  "word": "he",
+  "start": 48.73,
+  "end": 48.82,
+  "line": 10
+ },
+ {
+  "word": "kept",
+  "start": 48.82,
+  "end": 49.1,
+  "line": 10
+ },
+ {
+  "word": "trading",
+  "start": 49.1,
+  "end": 49.42,
+  "line": 10
+ },
+ {
+  "word": "bitcoin",
+  "start": 49.42,
+  "end": 49.8,
+  "line": 10
+ },
+ {
+  "word": "for",
+  "start": 49.8,
+  "end": 49.91,
+  "line": 10
+ },
+ {
+  "word": "pizza",
+  "start": 49.91,
+  "end": 50.28,
+  "line": 10
+ },
+ {
+  "word": "for",
+  "start": 50.28,
+  "end": 50.46,
+  "line": 10
+ },
+ {
+  "word": "months",
+  "start": 50.46,
+  "end": 51.08,
+  "line": 10
+ },
+ {
+  "word": "and",
+  "start": 51.45,
+  "end": 51.58,
+  "line": 11
+ },
+ {
+  "word": "jeremy",
+  "start": 51.58,
+  "end": 52.06,
+  "line": 11
+ },
+ {
+  "word": "he",
+  "start": 52.42,
+  "end": 52.53,
+  "line": 11
+ },
+ {
+  "word": "spent",
+  "start": 52.53,
+  "end": 52.84,
+  "line": 11
+ },
+ {
+  "word": "all",
+  "start": 52.84,
+  "end": 53.08,
+  "line": 11
+ },
+ {
+  "word": "ten",
+  "start": 53.08,
+  "end": 53.33,
+  "line": 11,
+  "num": "10,000",
+  "grp": 13
+ },
+ {
+  "word": "thousand",
+  "start": 53.33,
+  "end": 53.66,
+  "line": 11,
+  "num": "10,000",
+  "grp": 13
+ },
+ {
+  "word": "coins",
+  "start": 53.66,
+  "end": 54.04,
+  "line": 11
+ },
+ {
+  "word": "when",
+  "start": 54.04,
+  "end": 54.14,
+  "line": 11
+ },
+ {
+  "word": "they",
+  "start": 54.14,
+  "end": 54.2,
+  "line": 11
+ },
+ {
+  "word": "were",
+  "start": 54.2,
+  "end": 54.32,
+  "line": 11
+ },
+ {
+  "word": "worth",
+  "start": 54.32,
+  "end": 54.55,
+  "line": 11
+ },
+ {
+  "word": "about",
+  "start": 54.55,
+  "end": 54.78,
+  "line": 11
+ },
+ {
+  "word": "four",
+  "start": 54.78,
+  "end": 55.06,
+  "line": 11,
+  "num": "400",
+  "grp": 14
+ },
+ {
+  "word": "hundred",
+  "start": 55.06,
+  "end": 55.33,
+  "line": 11,
+  "num": "400",
+  "grp": 14
+ },
+ {
+  "word": "dollars",
+  "start": 55.33,
+  "end": 55.83,
+  "line": 11
+ },
+ {
+  "word": "you",
+  "start": 56.3,
+  "end": 56.39,
+  "line": 12
+ },
+ {
+  "word": "see",
+  "start": 56.39,
+  "end": 56.85,
+  "line": 12
+ },
+ {
+  "word": "back",
+  "start": 56.85,
+  "end": 57.14,
+  "line": 12
+ },
+ {
+  "word": "then",
+  "start": 57.14,
+  "end": 57.46,
+  "line": 12
+ },
+ {
+  "word": "bitcoin",
+  "start": 57.46,
+  "end": 57.86,
+  "line": 12
+ },
+ {
+  "word": "was",
+  "start": 57.86,
+  "end": 58.02,
+  "line": 12
+ },
+ {
+  "word": "like",
+  "start": 58.02,
+  "end": 58.19,
+  "line": 12
+ },
+ {
+  "word": "arcade",
+  "start": 58.19,
+  "end": 58.64,
+  "line": 12
+ },
+ {
+  "word": "tokens",
+  "start": 58.64,
+  "end": 59.17,
+  "line": 12
+ },
+ {
+  "word": "nobody",
+  "start": 59.47,
+  "end": 59.8,
+  "line": 12
+ },
+ {
+  "word": "believed",
+  "start": 59.8,
+  "end": 60.18,
+  "line": 12
+ },
+ {
+  "word": "they",
+  "start": 60.18,
+  "end": 60.26,
+  "line": 12
+ },
+ {
+  "word": "were",
+  "start": 60.26,
+  "end": 60.39,
+  "line": 12
+ },
+ {
+  "word": "real",
+  "start": 60.39,
+  "end": 60.66,
+  "line": 12
+ },
+ {
+  "word": "money",
+  "start": 60.66,
+  "end": 61.01,
+  "line": 12
+ },
+ {
+  "word": "until",
+  "start": 61.01,
+  "end": 61.26,
+  "line": 12
+ },
+ {
+  "word": "someone",
+  "start": 61.26,
+  "end": 61.62,
+  "line": 12
+ },
+ {
+  "word": "used",
+  "start": 61.62,
+  "end": 61.89,
+  "line": 12
+ },
+ {
+  "word": "them",
+  "start": 61.89,
+  "end": 62.08,
+  "line": 12
+ },
+ {
+  "word": "those",
+  "start": 62.55,
+  "end": 62.79,
+  "line": 13
+ },
+ {
+  "word": "two",
+  "start": 62.79,
+  "end": 62.96,
+  "line": 13,
+  "num": "2",
+  "grp": 15
+ },
+ {
+  "word": "pizzas",
+  "start": 62.96,
+  "end": 63.33,
+  "line": 13
+ },
+ {
+  "word": "proved",
+  "start": 63.33,
+  "end": 63.87,
+  "line": 13
+ },
+ {
+  "word": "for",
+  "start": 63.87,
+  "end": 63.97,
+  "line": 13
+ },
+ {
+  "word": "the",
+  "start": 63.97,
+  "end": 64.04,
+  "line": 13
+ },
+ {
+  "word": "first",
+  "start": 64.04,
+  "end": 64.42,
+  "line": 13
+ },
+ {
+  "word": "time",
+  "start": 64.42,
+  "end": 64.79,
+  "line": 13
+ },
+ {
+  "word": "that",
+  "start": 64.79,
+  "end": 65.16,
+  "line": 13
+ },
+ {
+  "word": "bitcoin",
+  "start": 65.16,
+  "end": 65.59,
+  "line": 13
+ },
+ {
+  "word": "could",
+  "start": 65.59,
+  "end": 65.79,
+  "line": 13
+ },
+ {
+  "word": "buy",
+  "start": 65.79,
+  "end": 66.0,
+  "line": 13
+ },
+ {
+  "word": "something",
+  "start": 66.0,
+  "end": 66.4,
+  "line": 13
+ },
+ {
+  "word": "real",
+  "start": 66.4,
+  "end": 66.75,
+  "line": 13
+ },
+ {
+  "word": "years",
+  "start": 67.23,
+  "end": 67.5,
+  "line": 14
+ },
+ {
+  "word": "later",
+  "start": 67.5,
+  "end": 67.91,
+  "line": 14
+ },
+ {
+  "word": "at",
+  "start": 67.91,
+  "end": 68.09,
+  "line": 14
+ },
+ {
+  "word": "bitcoin's",
+  "start": 68.09,
+  "end": 68.51,
+  "line": 14
+ },
+ {
+  "word": "peak",
+  "start": 68.51,
+  "end": 68.83,
+  "line": 14
+ },
+ {
+  "word": "those",
+  "start": 68.83,
+  "end": 69.28,
+  "line": 14
+ },
+ {
+  "word": "same",
+  "start": 69.28,
+  "end": 69.64,
+  "line": 14
+ },
+ {
+  "word": "coins",
+  "start": 69.64,
+  "end": 70.03,
+  "line": 14
+ },
+ {
+  "word": "were",
+  "start": 70.03,
+  "end": 70.13,
+  "line": 14
+ },
+ {
+  "word": "worth",
+  "start": 70.13,
+  "end": 70.38,
+  "line": 14
+ },
+ {
+  "word": "over",
+  "start": 70.38,
+  "end": 70.7,
+  "line": 14
+ },
+ {
+  "word": "a",
+  "start": 70.7,
+  "end": 70.75,
+  "line": 14
+ },
+ {
+  "word": "billion",
+  "start": 70.75,
+  "end": 71.3,
+  "line": 14
+ },
+ {
+  "word": "dollars",
+  "start": 71.3,
+  "end": 71.83,
+  "line": 14
+ },
+ {
+  "word": "laszlo",
+  "start": 72.22,
+  "end": 72.55,
+  "line": 15
+ },
+ {
+  "word": "says",
+  "start": 72.55,
+  "end": 72.95,
+  "line": 15
+ },
+ {
+  "word": "he",
+  "start": 72.95,
+  "end": 73.06,
+  "line": 15
+ },
+ {
+  "word": "has",
+  "start": 73.06,
+  "end": 73.27,
+  "line": 15
+ },
+ {
+  "word": "no",
+  "start": 73.27,
+  "end": 73.48,
+  "line": 15
+ },
+ {
+  "word": "regrets",
+  "start": 73.48,
+  "end": 74.0,
+  "line": 15
+ },
+ {
+  "word": "so",
+  "start": 74.44,
+  "end": 74.76,
+  "line": 16
+ },
+ {
+  "word": "the",
+  "start": 74.76,
+  "end": 74.89,
+  "line": 16
+ },
+ {
+  "word": "most",
+  "start": 74.89,
+  "end": 75.15,
+  "line": 16
+ },
+ {
+  "word": "expensive",
+  "start": 75.15,
+  "end": 75.74,
+  "line": 16
+ },
+ {
+  "word": "pizza",
+  "start": 75.74,
+  "end": 76.08,
+  "line": 16
+ },
+ {
+  "word": "in",
+  "start": 76.08,
+  "end": 76.18,
+  "line": 16
+ },
+ {
+  "word": "history",
+  "start": 76.18,
+  "end": 76.7,
+  "line": 16
+ },
+ {
+  "word": "was",
+  "start": 76.92,
+  "end": 77.11,
+  "line": 16
+ },
+ {
+  "word": "eaten",
+  "start": 77.11,
+  "end": 77.4,
+  "line": 16
+ },
+ {
+  "word": "in",
+  "start": 77.4,
+  "end": 77.56,
+  "line": 16
+ },
+ {
+  "word": "one",
+  "start": 77.56,
+  "end": 77.87,
+  "line": 16
+ },
+ {
+  "word": "evening",
+  "start": 77.87,
+  "end": 78.45,
+  "line": 16
+ }
+]
