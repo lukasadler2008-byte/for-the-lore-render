@@ -1,0 +1,1214 @@
+[
+ {
+  "word": "he",
+  "start": 0.0,
+  "end": 0.1,
+  "line": 1
+ },
+ {
+  "word": "tricked",
+  "start": 0.1,
+  "end": 0.4,
+  "line": 1
+ },
+ {
+  "word": "a",
+  "start": 0.4,
+  "end": 0.46,
+  "line": 1
+ },
+ {
+  "word": "whole",
+  "start": 0.46,
+  "end": 0.79,
+  "line": 1
+ },
+ {
+  "word": "city",
+  "start": 0.79,
+  "end": 1.25,
+  "line": 1
+ },
+ {
+  "word": "into",
+  "start": 1.25,
+  "end": 1.46,
+  "line": 1
+ },
+ {
+  "word": "pulling",
+  "start": 1.46,
+  "end": 1.76,
+  "line": 1
+ },
+ {
+  "word": "its",
+  "start": 1.76,
+  "end": 1.89,
+  "line": 1
+ },
+ {
+  "word": "own",
+  "start": 1.89,
+  "end": 2.23,
+  "line": 1
+ },
+ {
+  "word": "doom",
+  "start": 2.23,
+  "end": 2.55,
+  "line": 1
+ },
+ {
+  "word": "through",
+  "start": 2.55,
+  "end": 2.69,
+  "line": 1
+ },
+ {
+  "word": "the",
+  "start": 2.69,
+  "end": 2.78,
+  "line": 1
+ },
+ {
+  "word": "gates",
+  "start": 2.78,
+  "end": 3.35,
+  "line": 1
+ },
+ {
+  "word": "for",
+  "start": 3.71,
+  "end": 3.83,
+  "line": 2
+ },
+ {
+  "word": "ten",
+  "start": 3.83,
+  "end": 4.23,
+  "line": 2
+ },
+ {
+  "word": "years",
+  "start": 4.23,
+  "end": 4.75,
+  "line": 2
+ },
+ {
+  "word": "the",
+  "start": 4.75,
+  "end": 4.84,
+  "line": 2
+ },
+ {
+  "word": "greeks",
+  "start": 4.84,
+  "end": 5.2,
+  "line": 2
+ },
+ {
+  "word": "fail",
+  "start": 5.2,
+  "end": 5.54,
+  "line": 2
+ },
+ {
+  "word": "to",
+  "start": 5.54,
+  "end": 5.65,
+  "line": 2
+ },
+ {
+  "word": "break",
+  "start": 5.65,
+  "end": 5.87,
+  "line": 2
+ },
+ {
+  "word": "the",
+  "start": 5.87,
+  "end": 5.94,
+  "line": 2
+ },
+ {
+  "word": "walls",
+  "start": 5.94,
+  "end": 6.28,
+  "line": 2
+ },
+ {
+  "word": "of",
+  "start": 6.28,
+  "end": 6.38,
+  "line": 2
+ },
+ {
+  "word": "troy",
+  "start": 6.38,
+  "end": 6.77,
+  "line": 2
+ },
+ {
+  "word": "then",
+  "start": 7.2,
+  "end": 7.59,
+  "line": 3
+ },
+ {
+  "word": "one",
+  "start": 7.59,
+  "end": 7.79,
+  "line": 3
+ },
+ {
+  "word": "morning",
+  "start": 7.79,
+  "end": 8.17,
+  "line": 3
+ },
+ {
+  "word": "their",
+  "start": 8.17,
+  "end": 8.47,
+  "line": 3
+ },
+ {
+  "word": "camp",
+  "start": 8.47,
+  "end": 8.74,
+  "line": 3
+ },
+ {
+  "word": "is",
+  "start": 8.74,
+  "end": 8.9,
+  "line": 3
+ },
+ {
+  "word": "empty",
+  "start": 8.9,
+  "end": 9.43,
+  "line": 3
+ },
+ {
+  "word": "and",
+  "start": 9.43,
+  "end": 9.55,
+  "line": 3
+ },
+ {
+  "word": "a",
+  "start": 9.55,
+  "end": 9.59,
+  "line": 3
+ },
+ {
+  "word": "giant",
+  "start": 9.59,
+  "end": 10.08,
+  "line": 3
+ },
+ {
+  "word": "wooden",
+  "start": 10.08,
+  "end": 10.33,
+  "line": 3
+ },
+ {
+  "word": "horse",
+  "start": 10.33,
+  "end": 10.68,
+  "line": 3
+ },
+ {
+  "word": "stands",
+  "start": 10.68,
+  "end": 10.97,
+  "line": 3
+ },
+ {
+  "word": "outside",
+  "start": 10.97,
+  "end": 11.48,
+  "line": 3
+ },
+ {
+  "word": "a",
+  "start": 11.93,
+  "end": 12.0,
+  "line": 4
+ },
+ {
+  "word": "greek",
+  "start": 12.0,
+  "end": 12.25,
+  "line": 4
+ },
+ {
+  "word": "named",
+  "start": 12.25,
+  "end": 12.44,
+  "line": 4
+ },
+ {
+  "word": "sinon",
+  "start": 12.44,
+  "end": 12.93,
+  "line": 4
+ },
+ {
+  "word": "says",
+  "start": 12.93,
+  "end": 13.27,
+  "line": 4
+ },
+ {
+  "word": "it's",
+  "start": 13.27,
+  "end": 13.41,
+  "line": 4
+ },
+ {
+  "word": "a",
+  "start": 13.41,
+  "end": 13.44,
+  "line": 4
+ },
+ {
+  "word": "gift",
+  "start": 13.44,
+  "end": 13.82,
+  "line": 4
+ },
+ {
+  "word": "for",
+  "start": 13.82,
+  "end": 13.91,
+  "line": 4
+ },
+ {
+  "word": "the",
+  "start": 13.91,
+  "end": 14.02,
+  "line": 4
+ },
+ {
+  "word": "goddess",
+  "start": 14.02,
+  "end": 14.34,
+  "line": 4
+ },
+ {
+  "word": "athena",
+  "start": 14.34,
+  "end": 14.84,
+  "line": 4
+ },
+ {
+  "word": "a",
+  "start": 15.28,
+  "end": 15.34,
+  "line": 5
+ },
+ {
+  "word": "priest",
+  "start": 15.34,
+  "end": 15.68,
+  "line": 5
+ },
+ {
+  "word": "named",
+  "start": 15.68,
+  "end": 15.86,
+  "line": 5
+ },
+ {
+  "word": "laocoon",
+  "start": 15.86,
+  "end": 16.41,
+  "line": 5
+ },
+ {
+  "word": "warns",
+  "start": 16.41,
+  "end": 16.78,
+  "line": 5
+ },
+ {
+  "word": "them",
+  "start": 16.78,
+  "end": 16.97,
+  "line": 5
+ },
+ {
+  "word": "don't",
+  "start": 17.3,
+  "end": 17.55,
+  "line": 5
+ },
+ {
+  "word": "trust",
+  "start": 17.55,
+  "end": 17.96,
+  "line": 5
+ },
+ {
+  "word": "it",
+  "start": 17.96,
+  "end": 18.15,
+  "line": 5
+ },
+ {
+  "word": "nobody",
+  "start": 18.58,
+  "end": 18.92,
+  "line": 6
+ },
+ {
+  "word": "listens",
+  "start": 18.92,
+  "end": 19.44,
+  "line": 6
+ },
+ {
+  "word": "and",
+  "start": 19.44,
+  "end": 19.58,
+  "line": 6
+ },
+ {
+  "word": "the",
+  "start": 19.58,
+  "end": 19.64,
+  "line": 6
+ },
+ {
+  "word": "trojans",
+  "start": 19.64,
+  "end": 20.16,
+  "line": 6
+ },
+ {
+  "word": "drag",
+  "start": 20.16,
+  "end": 20.48,
+  "line": 6
+ },
+ {
+  "word": "the",
+  "start": 20.48,
+  "end": 20.55,
+  "line": 6
+ },
+ {
+  "word": "horse",
+  "start": 20.55,
+  "end": 20.85,
+  "line": 6
+ },
+ {
+  "word": "inside",
+  "start": 20.85,
+  "end": 21.33,
+  "line": 6
+ },
+ {
+  "word": "that",
+  "start": 21.77,
+  "end": 21.97,
+  "line": 7
+ },
+ {
+  "word": "night",
+  "start": 21.97,
+  "end": 22.49,
+  "line": 7
+ },
+ {
+  "word": "greek",
+  "start": 22.49,
+  "end": 22.71,
+  "line": 7
+ },
+ {
+  "word": "soldiers",
+  "start": 22.71,
+  "end": 23.19,
+  "line": 7
+ },
+ {
+  "word": "hidden",
+  "start": 23.19,
+  "end": 23.42,
+  "line": 7
+ },
+ {
+  "word": "in",
+  "start": 23.42,
+  "end": 23.53,
+  "line": 7
+ },
+ {
+  "word": "its",
+  "start": 23.53,
+  "end": 23.68,
+  "line": 7
+ },
+ {
+  "word": "belly",
+  "start": 23.68,
+  "end": 24.0,
+  "line": 7
+ },
+ {
+  "word": "climb",
+  "start": 24.0,
+  "end": 24.39,
+  "line": 7
+ },
+ {
+  "word": "out",
+  "start": 24.39,
+  "end": 24.62,
+  "line": 7
+ },
+ {
+  "word": "and",
+  "start": 24.62,
+  "end": 24.77,
+  "line": 7
+ },
+ {
+  "word": "open",
+  "start": 24.77,
+  "end": 25.03,
+  "line": 7
+ },
+ {
+  "word": "the",
+  "start": 25.03,
+  "end": 25.11,
+  "line": 7
+ },
+ {
+  "word": "gates",
+  "start": 25.11,
+  "end": 25.56,
+  "line": 7
+ },
+ {
+  "word": "by",
+  "start": 25.9,
+  "end": 26.02,
+  "line": 8
+ },
+ {
+  "word": "morning",
+  "start": 26.02,
+  "end": 26.45,
+  "line": 8
+ },
+ {
+  "word": "troy",
+  "start": 26.68,
+  "end": 27.09,
+  "line": 8
+ },
+ {
+  "word": "is",
+  "start": 27.09,
+  "end": 27.32,
+  "line": 8
+ },
+ {
+  "word": "burning",
+  "start": 27.32,
+  "end": 27.76,
+  "line": 8
+ },
+ {
+  "word": "here's",
+  "start": 28.22,
+  "end": 28.4,
+  "line": 9
+ },
+ {
+  "word": "the",
+  "start": 28.4,
+  "end": 28.47,
+  "line": 9
+ },
+ {
+  "word": "strange",
+  "start": 28.47,
+  "end": 28.82,
+  "line": 9
+ },
+ {
+  "word": "part",
+  "start": 28.82,
+  "end": 29.07,
+  "line": 9
+ },
+ {
+  "word": "homer's",
+  "start": 29.51,
+  "end": 29.88,
+  "line": 9
+ },
+ {
+  "word": "iliad",
+  "start": 29.88,
+  "end": 30.28,
+  "line": 9
+ },
+ {
+  "word": "never",
+  "start": 30.28,
+  "end": 30.65,
+  "line": 9
+ },
+ {
+  "word": "tells",
+  "start": 30.65,
+  "end": 30.95,
+  "line": 9
+ },
+ {
+  "word": "this",
+  "start": 30.95,
+  "end": 31.11,
+  "line": 9
+ },
+ {
+  "word": "story",
+  "start": 31.11,
+  "end": 31.42,
+  "line": 9
+ },
+ {
+  "word": "the",
+  "start": 31.42,
+  "end": 31.94,
+  "line": 10
+ },
+ {
+  "word": "famous",
+  "start": 31.94,
+  "end": 32.28,
+  "line": 10
+ },
+ {
+  "word": "version",
+  "start": 32.28,
+  "end": 32.58,
+  "line": 10
+ },
+ {
+  "word": "comes",
+  "start": 32.58,
+  "end": 32.84,
+  "line": 10
+ },
+ {
+  "word": "from",
+  "start": 32.84,
+  "end": 32.98,
+  "line": 10
+ },
+ {
+  "word": "the",
+  "start": 32.98,
+  "end": 33.06,
+  "line": 10
+ },
+ {
+  "word": "roman",
+  "start": 33.06,
+  "end": 33.39,
+  "line": 10
+ },
+ {
+  "word": "poet",
+  "start": 33.39,
+  "end": 33.67,
+  "line": 10
+ },
+ {
+  "word": "virgil",
+  "start": 33.67,
+  "end": 34.26,
+  "line": 10
+ },
+ {
+  "word": "about",
+  "start": 34.26,
+  "end": 34.49,
+  "line": 10
+ },
+ {
+  "word": "twelve",
+  "start": 34.49,
+  "end": 34.81,
+  "line": 10
+ },
+ {
+  "word": "hundred",
+  "start": 34.81,
+  "end": 35.1,
+  "line": 10
+ },
+ {
+  "word": "years",
+  "start": 35.1,
+  "end": 35.33,
+  "line": 10
+ },
+ {
+  "word": "later",
+  "start": 35.33,
+  "end": 35.72,
+  "line": 10
+ },
+ {
+  "word": "and",
+  "start": 36.14,
+  "end": 36.26,
+  "line": 11
+ },
+ {
+  "word": "troy",
+  "start": 36.26,
+  "end": 36.46,
+  "line": 11
+ },
+ {
+  "word": "was",
+  "start": 36.46,
+  "end": 36.63,
+  "line": 11
+ },
+ {
+  "word": "real",
+  "start": 36.63,
+  "end": 37.02,
+  "line": 11
+ },
+ {
+  "word": "its",
+  "start": 37.35,
+  "end": 37.49,
+  "line": 11
+ },
+ {
+  "word": "ruins",
+  "start": 37.49,
+  "end": 37.86,
+  "line": 11
+ },
+ {
+  "word": "sit",
+  "start": 37.86,
+  "end": 38.06,
+  "line": 11
+ },
+ {
+  "word": "in",
+  "start": 38.06,
+  "end": 38.14,
+  "line": 11
+ },
+ {
+  "word": "turkey",
+  "start": 38.14,
+  "end": 38.63,
+  "line": 11
+ },
+ {
+  "word": "and",
+  "start": 38.63,
+  "end": 38.8,
+  "line": 11
+ },
+ {
+  "word": "diggers",
+  "start": 38.8,
+  "end": 39.12,
+  "line": 11
+ },
+ {
+  "word": "found",
+  "start": 39.12,
+  "end": 39.31,
+  "line": 11
+ },
+ {
+  "word": "a",
+  "start": 39.31,
+  "end": 39.34,
+  "line": 11
+ },
+ {
+  "word": "city",
+  "start": 39.34,
+  "end": 39.69,
+  "line": 11
+ },
+ {
+  "word": "burned",
+  "start": 39.69,
+  "end": 39.98,
+  "line": 11
+ },
+ {
+  "word": "by",
+  "start": 39.98,
+  "end": 40.1,
+  "line": 11
+ },
+ {
+  "word": "fire",
+  "start": 40.1,
+  "end": 40.6,
+  "line": 11
+ },
+ {
+  "word": "but",
+  "start": 40.99,
+  "end": 41.29,
+  "line": 12
+ },
+ {
+  "word": "nobody",
+  "start": 41.29,
+  "end": 41.7,
+  "line": 12
+ },
+ {
+  "word": "has",
+  "start": 41.7,
+  "end": 41.94,
+  "line": 12
+ },
+ {
+  "word": "ever",
+  "start": 41.94,
+  "end": 42.17,
+  "line": 12
+ },
+ {
+  "word": "found",
+  "start": 42.17,
+  "end": 42.43,
+  "line": 12
+ },
+ {
+  "word": "a",
+  "start": 42.43,
+  "end": 42.48,
+  "line": 12
+ },
+ {
+  "word": "horse",
+  "start": 42.48,
+  "end": 42.98,
+  "line": 12
+ },
+ {
+  "word": "wait",
+  "start": 43.47,
+  "end": 43.69,
+  "line": 13
+ },
+ {
+  "word": "so",
+  "start": 44.08,
+  "end": 44.35,
+  "line": 13
+ },
+ {
+  "word": "where",
+  "start": 44.35,
+  "end": 44.77,
+  "line": 13
+ },
+ {
+  "word": "did",
+  "start": 44.77,
+  "end": 44.89,
+  "line": 13
+ },
+ {
+  "word": "the",
+  "start": 44.89,
+  "end": 44.96,
+  "line": 13
+ },
+ {
+  "word": "story",
+  "start": 44.96,
+  "end": 45.24,
+  "line": 13
+ },
+ {
+  "word": "come",
+  "start": 45.24,
+  "end": 45.47,
+  "line": 13
+ },
+ {
+  "word": "from",
+  "start": 45.47,
+  "end": 45.7,
+  "line": 13
+ },
+ {
+  "word": "some",
+  "start": 46.13,
+  "end": 46.37,
+  "line": 14
+ },
+ {
+  "word": "historians",
+  "start": 46.37,
+  "end": 46.9,
+  "line": 14
+ },
+ {
+  "word": "think",
+  "start": 46.9,
+  "end": 47.07,
+  "line": 14
+ },
+ {
+  "word": "the",
+  "start": 47.07,
+  "end": 47.14,
+  "line": 14
+ },
+ {
+  "word": "horse",
+  "start": 47.14,
+  "end": 47.47,
+  "line": 14
+ },
+ {
+  "word": "was",
+  "start": 47.47,
+  "end": 47.62,
+  "line": 14
+ },
+ {
+  "word": "a",
+  "start": 47.62,
+  "end": 47.66,
+  "line": 14
+ },
+ {
+  "word": "siege",
+  "start": 47.66,
+  "end": 48.0,
+  "line": 14
+ },
+ {
+  "word": "machine",
+  "start": 48.0,
+  "end": 48.45,
+  "line": 14
+ },
+ {
+  "word": "or",
+  "start": 48.45,
+  "end": 48.7,
+  "line": 14
+ },
+ {
+  "word": "even",
+  "start": 48.7,
+  "end": 48.97,
+  "line": 14
+ },
+ {
+  "word": "an",
+  "start": 48.97,
+  "end": 49.09,
+  "line": 14
+ },
+ {
+  "word": "earthquake",
+  "start": 49.09,
+  "end": 49.72,
+  "line": 14
+ },
+ {
+  "word": "since",
+  "start": 49.72,
+  "end": 49.93,
+  "line": 14
+ },
+ {
+  "word": "poseidon",
+  "start": 49.93,
+  "end": 50.41,
+  "line": 14
+ },
+ {
+  "word": "was",
+  "start": 50.41,
+  "end": 50.57,
+  "line": 14
+ },
+ {
+  "word": "the",
+  "start": 50.57,
+  "end": 50.64,
+  "line": 14
+ },
+ {
+  "word": "god",
+  "start": 50.64,
+  "end": 50.89,
+  "line": 14
+ },
+ {
+  "word": "of",
+  "start": 50.89,
+  "end": 50.98,
+  "line": 14
+ },
+ {
+  "word": "both",
+  "start": 50.98,
+  "end": 51.19,
+  "line": 14
+ },
+ {
+  "word": "horses",
+  "start": 51.19,
+  "end": 51.67,
+  "line": 14
+ },
+ {
+  "word": "and",
+  "start": 51.67,
+  "end": 51.89,
+  "line": 14
+ },
+ {
+  "word": "earthquakes",
+  "start": 51.89,
+  "end": 52.49,
+  "line": 14
+ },
+ {
+  "word": "maybe",
+  "start": 52.91,
+  "end": 53.09,
+  "line": 15
+ },
+ {
+  "word": "the",
+  "start": 53.09,
+  "end": 53.18,
+  "line": 15
+ },
+ {
+  "word": "walls",
+  "start": 53.18,
+  "end": 53.57,
+  "line": 15
+ },
+ {
+  "word": "fell",
+  "start": 53.57,
+  "end": 53.92,
+  "line": 15
+ },
+ {
+  "word": "and",
+  "start": 53.92,
+  "end": 54.03,
+  "line": 15
+ },
+ {
+  "word": "the",
+  "start": 54.03,
+  "end": 54.09,
+  "line": 15
+ },
+ {
+  "word": "story",
+  "start": 54.09,
+  "end": 54.44,
+  "line": 15
+ },
+ {
+  "word": "turned",
+  "start": 54.44,
+  "end": 54.66,
+  "line": 15
+ },
+ {
+  "word": "it",
+  "start": 54.66,
+  "end": 54.74,
+  "line": 15
+ },
+ {
+  "word": "into",
+  "start": 54.74,
+  "end": 54.97,
+  "line": 15
+ },
+ {
+  "word": "a",
+  "start": 54.97,
+  "end": 55.02,
+  "line": 15
+ },
+ {
+  "word": "trick",
+  "start": 55.02,
+  "end": 55.39,
+  "line": 15
+ },
+ {
+  "word": "either",
+  "start": 55.79,
+  "end": 56.0,
+  "line": 16
+ },
+ {
+  "word": "way",
+  "start": 56.0,
+  "end": 56.44,
+  "line": 16
+ },
+ {
+  "word": "it",
+  "start": 56.44,
+  "end": 56.55,
+  "line": 16
+ },
+ {
+  "word": "still",
+  "start": 56.55,
+  "end": 56.88,
+  "line": 16
+ },
+ {
+  "word": "teaches",
+  "start": 56.88,
+  "end": 57.24,
+  "line": 16
+ },
+ {
+  "word": "the",
+  "start": 57.24,
+  "end": 57.31,
+  "line": 16
+ },
+ {
+  "word": "same",
+  "start": 57.31,
+  "end": 57.63,
+  "line": 16
+ },
+ {
+  "word": "lesson",
+  "start": 57.63,
+  "end": 57.97,
+  "line": 16
+ },
+ {
+  "word": "the",
+  "start": 58.41,
+  "end": 58.48,
+  "line": 17
+ },
+ {
+  "word": "strongest",
+  "start": 58.48,
+  "end": 59.01,
+  "line": 17
+ },
+ {
+  "word": "walls",
+  "start": 59.01,
+  "end": 59.27,
+  "line": 17
+ },
+ {
+  "word": "in",
+  "start": 59.27,
+  "end": 59.33,
+  "line": 17
+ },
+ {
+  "word": "the",
+  "start": 59.33,
+  "end": 59.39,
+  "line": 17
+ },
+ {
+  "word": "world",
+  "start": 59.39,
+  "end": 59.84,
+  "line": 17
+ },
+ {
+  "word": "mean",
+  "start": 59.84,
+  "end": 60.12,
+  "line": 17
+ },
+ {
+  "word": "nothing",
+  "start": 60.12,
+  "end": 60.52,
+  "line": 17
+ },
+ {
+  "word": "if",
+  "start": 60.78,
+  "end": 60.88,
+  "line": 17
+ },
+ {
+  "word": "you",
+  "start": 60.88,
+  "end": 60.99,
+  "line": 17
+ },
+ {
+  "word": "let",
+  "start": 60.99,
+  "end": 61.16,
+  "line": 17
+ },
+ {
+  "word": "the",
+  "start": 61.16,
+  "end": 61.28,
+  "line": 17
+ },
+ {
+  "word": "enemy",
+  "start": 61.28,
+  "end": 61.61,
+  "line": 17
+ },
+ {
+  "word": "in",
+  "start": 61.61,
+  "end": 61.74,
+  "line": 17
+ },
+ {
+  "word": "yourself",
+  "start": 61.74,
+  "end": 62.44,
+  "line": 17
+ }
+]
