@@ -278,13 +278,13 @@ const lavaStreaks = (out: Stage, t: number, tb: number) => {
     sv(out, { k: "lava", x, y: 210 - ((rr - 34) * 210) / 231 + 1.2, z: -420 + zz + 1.0, yaw: phi, pitch: 0.738, a: (50 + 40 * hh(i, 4)) * k, b: 5 + 4 * hh(i, 5) }); }
 };
 const wave = (out: Stage, t: number) => {
-  const dF = waveD(t); if (dF <= 0) return;
+  const dF = waveD(t), fade = 1 - clamp01((t - 33.45) / 0.45); if (dF <= 0 || fade <= 0) return;
   for (let i = 0; i < 28; i++) {
     const row = i % 7, back = Math.floor(i / 7) * 24 + hh(i, 2) * 8, d = dF - back; if (d < 0) continue;
-    const p = pathAt(d), s = 14 + 8 * hh(i, 3) + back * 0.12, x = (row - 3) * 11 + hh(i, 1) * 4, nz = p.slope ? 0.65 : 0, ny = p.slope ? 0.76 : 1;
+    const p = pathAt(d), s = (14 + 8 * hh(i, 3) + back * 0.12) * fade, x = (row - 3) * 11 + hh(i, 1) * 4, nz = p.slope ? 0.65 : 0, ny = p.slope ? 0.76 : 1;
     sv(out, { k: i % 3 === 0 ? "ashO" : "ash", x, y: Math.max(s * 0.4, p.y + s * 0.5 * ny), z: p.z + s * 0.5 * nz, s, yaw: i });
   }
-  for (let i = 0; i < 8; i++) { const d = dF - hh(i, 6) * 6; if (d < 0) continue; const p = pathAt(d); sv(out, { k: "ashO", x: (i - 3.5) * 11, y: Math.max(4, p.y + 4), z: p.z + 2, s: 10 + 3 * hh(i, 7), yaw: i }); }
+  for (let i = 0; i < 8; i++) { const d = dF - hh(i, 6) * 6; if (d < 0) continue; const p = pathAt(d); sv(out, { k: "ashO", x: (i - 3.5) * 11, y: Math.max(4, p.y + 4), z: p.z + 2, s: (10 + 3 * hh(i, 7)) * fade, yaw: i }); }
   const p0 = pathAt(dF); soft(out, "255,120,40", 0.8, 0, Math.max(6, p0.y + 6), p0.z + 6, 120);
 };
 const rain = (cam: CamInfo, t: number, out: Stage, kind: string, n: number, size: number, speed: number, spread = 9) => {
@@ -353,7 +353,7 @@ const s7 = (cam: CamInfo, t: number, out: Stage, sub: number) => {
 const s8 = (cam: CamInfo, t: number, out: Stage, sub: number) => {
   night(out, t);
   if (sub === 2) { rm(cam, t, out, 1, 0, 0, 0, "shock", { shrug: 0.4, headTilt: 0.1 * Math.sin(t * 9) }); soft(out, "255,120,40", 0.55, 0, 1.6, -1, 5); }
-  if (sub === 3) { for (let i = 0; i < 4; i++) fire(out, t, -3.8 + 0.0 * i, 0.5, -33.8 + i * 0.5, 0.35 + 0.12 * Math.sin(t * 8 + i) + 0.3 * clamp01((t - wt(8, "hotter")) / 1.2)); soft(out, "255,150,40", 0.8, -3.9, 1.0, -33, 4.5); for (let i = 0; i < 5; i++) sv(out, { k: "loaf", x: -3.88, y: 0.54, z: -33.7 + i * 0.4, s: 1.3, yaw: i * 0.8 }); }
+  if (sub === 3) { for (let i = 0; i < 4; i++) sv(out, { k: "fire", x: -3.8, y: 0.5, z: -33.8 + i * 0.5, s: 0.4, b: t * 7 + i, a: 0.35 + 0.12 * Math.sin(t * 8 + i) + 0.3 * clamp01((t - wt(8, "hotter")) / 1.2) }); soft(out, "255,150,40", 0.8, -3.9, 1.0, -33, 4.5); for (let i = 0; i < 5; i++) sv(out, { k: "loaf", x: -3.88, y: 0.54, z: -33.7 + i * 0.4, s: 1.3, yaw: i * 0.8 }); }
   if (sub >= 4) runnersAhead(cam, t, out);
 };
 // ---- 9 it killed everyone ----
