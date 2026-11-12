@@ -94,41 +94,51 @@ const SPEC: Spec[] = [
   // 4 79 AD: calm mountain, then the blast (fast push-in)
   { line: 4, t0: lineStart(4), set: "pomp", light: "day", ...DAY, cam: mv([0, 1.4, 6], [0, 1.5, 4], [0, 100, -420], [0, 110, -420], 62, 60) },
   { line: 4, t0: wt(4, "exploded"), set: "pomp", light: "golden", ...GOLD, cam: mv([0, 3, 0], [0, 14, -70], [0, 195, -420], [0, 235, -420], 60, 40) },
-  // 5 the column of ash
-  { line: 5, t0: lineStart(5), set: "pomp", light: "golden", ...GOLD, cam: mv([0, 1.6, 8], [0, 1.7, 6], [0, 180, -420], [0, 380, -420], 66, 64) },
-  { line: 5, t0: wt(5, "over"), set: "pomp", light: "golden", ...GOLD, cam: mv([30, 1.0, 30], [12, 2.0, 20], [0, 360, -420], [0, 640, -420], 72, 78) },
-  // 6 pumice rain: people run (side tracking), others huddle at a door
-  { line: 6, t0: lineStart(6), set: "pomp", light: "golden", ...GOLD, cam: mv([-9, 1.5, 0], [-9, 1.5, 16], [0, 1.7, -2], [0, 1.7, 14], 54, 54) },
+  // 5 the column of ash: reaction, tilt up, the ash roof overhead
+  { line: 5, t0: lineStart(5), set: "pomp", light: "golden", ...GOLD, cam: mv([1.0, 0.9, 3.4], [0.7, 1.0, 2.7], [0, 55, -420], [0, 70, -420], 56, 48) },
+  { line: 5, t0: wt(5, "rose"), set: "pomp", light: "golden", ...GOLD, cam: mv([30, 1.0, 30], [12, 2.0, 20], [0, 300, -420], [0, 640, -420], 72, 78) },
+  { line: 5, t0: wt(5, "miles"), set: "pomp", light: "golden", ...GOLD, cam: mv([0, 1.5, -2], [0, 1.6, -6], [0, 80, -50], [0, 130, -120], 66, 70) },
+  // 6 pumice rain: side track, run toward the camera, the dash for the door
+  { line: 6, t0: lineStart(6), set: "pomp", light: "golden", ...GOLD, cam: mv([-9, 1.5, 0], [-9, 1.5, 9], [0, 1.7, -2], [0, 1.7, 7], 54, 54) },
+  { line: 6, t0: wt(6, "some"), set: "pomp", light: "golden", ...GOLD, cam: shake(mv([0.3, 1.4, 28], [0.3, 1.4, 33], [0, 32, -10], [0, 32, -4], 56, 56), 0.05) },
   { line: 6, t0: wt(6, "others"), set: "pomp", light: "golden", ...GOLD, cam: mv([-1.5, 1.5, -1.6], [-0.8, 1.55, -2.4], [6.5, 1.3, -6], [6.5, 1.3, -6], 46, 44) },
-  // 7 the deadly mistake: push-in on the closed door
-  { line: 7, t0: lineStart(7), set: "pomp", light: "golden", ...GOLD, cam: mv([0.5, 1.5, 1.5], [4.6, 1.4, -4.2], [6, 1.3, -6], [6, 1.3, -6], 48, 30) },
-  // 8 midnight: wide, flank, the rushing wave, the chase
-  { line: 8, t0: lineStart(8), set: "pomp", light: "night", ...NIGHT, cam: mv([0, 1.2, 4], [0, 1.3, 3], [0, 120, -420], [0, 150, -420], 62, 60) },
-  { line: 8, t0: wt(8, "wave"), set: "pomp", light: "night", ...NIGHT, cam: mv([330, 150, -250], [300, 160, -230], [0, 120, -300], [0, 60, -260], 60, 56) },
+  // 7 the deadly mistake: shut door, then the roof loads up
+  { line: 7, t0: lineStart(7), set: "pomp", light: "golden", ...GOLD, cam: shake(mv([0.5, 1.5, 1.5], [4.6, 1.4, -4.2], [6, 1.3, -6], [6, 1.3, -6], 48, 30), 0.05) },
+  { line: 7, t0: wt(7, "mistake"), set: "pomp", light: "golden", ...GOLD, cam: shake(mv([1.5, 1.0, -0.5], [2.5, 1.3, -1.5], [8.5, 5.4, -6], [8.5, 6.0, -6], 56, 50), 0.12) },
+  // 8 midnight: push-in, the wave begins, a face lit orange, the oven, the wave rushes, the chase
+  { line: 8, t0: lineStart(8), set: "pomp", light: "night", ...NIGHT, cam: mv([0, 1.4, 18], [0, 1.5, 8], [0, 100, -420], [0, 120, -420], 60, 54) },
+  { line: 8, t0: wt(8, "wave"), set: "pomp", light: "night", ...NIGHT, cam: mv([36, 26, 22], [26, 30, 12], [0, 110, -320], [0, 70, -250], 58, 52) },
+  { line: 8, t0: wt(8, "gas"), set: "pomp", light: "night", ...NIGHT, cam: mv([0.5, 1.6, 2.6], [0.2, 1.65, 1.8], [0, 1.55, 0], [0, 4, -20], 50, 36) },
+  { line: 8, t0: wt(8, "hotter"), set: "pomp", light: "night", ...NIGHT, cam: shake(mv([-1.8, 1.0, -28.5], [-2.8, 0.9, -31], [-4, 0.8, -33], [-4, 0.9, -33], 46, 34), 0.04) },
   { line: 8, t0: wt(8, "rushed"), set: "pomp", light: "night", ...NIGHT, cam: whipIn(mv([0, 1.8, -22], [0, 2.0, -24], [0, 70, -260], [0, 50, -240], 58, 52), 1) },
-  { line: 8, t0: wt(8, "hundred"), set: "pomp", light: "night", ...NIGHT, cam: mv([0, 2.0, -22], [0, 2.2, 14], [0, 5, -80], [0, 6, -40], 62, 66) },
-  // 9 it killed everyone: top-down as the wave sweeps over, then the silent street
-  { line: 9, t0: lineStart(9), set: "pomp", light: "night", ...NIGHT, cam: mv([0, 46, 4], [0, 48, 0], [0, 0, -14], [0, 0, -18], 58, 58, 0, 0) },
+  { line: 8, t0: wt(8, "over"), set: "pomp", light: "night", ...NIGHT, cam: mv([0, 2.0, -22], [0, 2.2, 14], [0, 5, -80], [0, 6, -40], 62, 66) },
+  // 9 it killed everyone: from far above, then the silent street
+  { line: 9, t0: lineStart(9), set: "pomp", light: "night", ...NIGHT, cam: mv([0, 85, 30], [0, 90, 22], [0, 0, -10], [0, 0, -14], 58, 58, 0, 0) },
   { line: 9, t0: wt(9, "touched"), set: "pomp", light: "night", ...NIGHT, cam: mv([0, 1.5, 12], [0, 1.5, 6], [0, 2, -20], [0, 2.5, -20], 52, 46) },
-  // 10 buried under twenty feet of ash
-  { line: 10, t0: lineStart(10), set: "ash", light: "day", sunAz: 110, sunEl: 40, cam: mv([-20, 3, 30], [-14, 26, 20], [0, 2, -30], [0, 0, -40], 58, 56) },
-  { line: 10, t0: wt(10, "buried"), set: "ash", light: "day", sunAz: 110, sunEl: 40, cam: mv([4, 1.4, 12], [3, 1.5, 10], [0, 1.0, 0], [0, 1.2, -4], 50, 46) },
-  // 11 forgotten for sixteen hundred years (time passes: day -> golden)
-  { line: 11, t0: lineStart(11), set: "ash", light: "day", sunAz: 90, sunEl: 55, cam: mv([0, 6, 40], [0, 5, 26], [0, 3, -30], [0, 3, -30], 56, 50) },
-  { line: 11, t0: wt(11, "sixteen"), set: "ash", light: "golden", sunAz: 165, sunEl: 8, cam: mv([30, 3, 10], [26, 3, 6], [0, 2, -20], [0, 2, -20], 50, 46) },
-  // 12 diggers find it, the city is preserved
+  // 10 buried: orbit, skim, crane up
+  { line: 10, t0: lineStart(10), set: "ash", light: "day", sunAz: 110, sunEl: 40, cam: orb([0, 0, -10], 80, 70, 40, 24, -0.5, 0.45, [0, 0, -20], 58, 54) },
+  { line: 10, t0: wt(10, "pompeii"), set: "ash", light: "day", sunAz: 110, sunEl: 40, cam: mv([0, 2.6, 30], [0, 3.0, -6], [0, 1.0, -30], [0, 1.0, -40], 56, 52) },
+  { line: 10, t0: wt(10, "twenty"), set: "ash", light: "day", sunAz: 110, sunEl: 40, cam: mv([0, 2, 14], [0, 42, 36], [0, 1, -20], [0, 0, -30], 54, 54) },
+  // 11 forgotten for sixteen hundred years: matching cuts, time passing
+  { line: 11, t0: lineStart(11), set: "ash", light: "day", sunAz: 90, sunEl: 55, cam: mv([0, 6, 40], [0, 5.6, 36], [0, 3, -30], [0, 3, -30], 56, 52) },
+  { line: 11, t0: lf(11, 0.25), set: "ash", light: "golden", sunAz: 165, sunEl: 8, cam: mv([0, 6, 40], [0, 5.6, 36], [0, 3, -30], [0, 3, -30], 56, 52) },
+  { line: 11, t0: lf(11, 0.5), set: "ash", light: "night", sunAz: 150, sunEl: 40, cam: mv([0, 6, 40], [0, 5.6, 36], [0, 3, -30], [0, 3, -30], 56, 52) },
+  { line: 11, t0: lf(11, 0.75), set: "ash", light: "day", sunAz: 230, sunEl: 35, cam: mv([0, 6, 40], [0, 5.6, 36], [0, 3, -30], [0, 3, -30], 56, 52) },
+  // 12 diggers find it; the whole city is revealed
   { line: 12, t0: lineStart(12), set: "dig", light: "day", sunAz: 130, sunEl: 48, cam: mv([4.5, 1.8, 4.5], [3, 2.0, 3], [0, 1.2, -4], [0, 0.6, -6], 54, 48, 0.03, -0.02) },
-  { line: 12, t0: wt(12, "city"), set: "pomp", light: "day", ...DAY, cam: whipIn(mv([0, 1.7, 20], [0, 1.9, 2], [0, 3, -60], [0, 4, -80], 58, 50), -1) },
-  // 13 bread in the ovens, graffiti on the walls
+  { line: 12, t0: wt(12, "and"), set: "pomp", light: "day", ...DAY, cam: whipIn(mv([0, 1.7, 24], [0, 38, 40], [0, 3, -40], [0, 0, -60], 58, 54), -1) },
+  // 13 bread, graffiti
   { line: 13, t0: lineStart(13), set: "pomp", light: "day", ...DAY, cam: mv([0.5, 1.5, -26], [-2.2, 1.0, -29.6], [-4.0, 0.75, -33], [-4.0, 0.75, -33], 44, 32) },
   { line: 13, t0: wt(13, "graffiti"), set: "pomp", light: "day", ...DAY, cam: whipIn(mv([-2, 1.6, -8], [-2, 1.6, -26], [-6.0, 1.6, -10], [-6.0, 1.6, -26], 50, 50), 1) },
-  // 14 the plaster molds
+  // 14 the molds: crane, low slide, push-in
   { line: 14, t0: lineStart(14), set: "ash", light: "day", sunAz: 120, sunEl: 40, cam: mv([0, 9, 6], [0, 13, 3], [0, 0, -2], [0, 0, -3], 50, 48) },
-  { line: 14, t0: wt(14, "perfect"), set: "ash", light: "day", sunAz: 120, sunEl: 40, cam: mv([3.4, 1.7, 4.6], [1.9, 1.0, 2.8], [0, 0.2, -0.4], [0, 0.2, -0.4], 44, 34) },
-  // 15 today: the quiet mountain, then the crowd that lives under it
+  { line: 14, t0: wt(14, "left"), set: "ash", light: "day", sunAz: 120, sunEl: 40, cam: mv([-5, 0.55, 5], [5, 0.55, 5], [-3, 0.2, -1], [4, 0.2, -1], 48, 48) },
+  { line: 14, t0: wt(14, "final"), set: "ash", light: "day", sunAz: 120, sunEl: 40, cam: mv([3.4, 1.7, 4.6], [1.9, 1.0, 2.8], [0, 0.2, -0.4], [0, 0.2, -0.4], 44, 34) },
+  // 15 today
   { line: 15, t0: lineStart(15), set: "pomp", light: "day", ...DAY, cam: mv([0, 1.6, 40], [0, 2.0, 34], [0, 110, -420], [0, 114, -420], 62, 58) },
   { line: 15, t0: wt(15, "nearly"), set: "pomp", light: "day", ...DAY, cam: mv([0, 30, 24], [0, 34, 16], [0, 0, -16], [0, 0, -20], 56, 52) },
-  // 16 the lesson: one person, the mountain above, slow push-in
+  { line: 15, t0: wt(15, "live"), set: "pomp", light: "day", ...DAY, cam: mv([0, 1.7, 30], [0, 1.8, 12], [0, 1.6, 0], [0, 1.6, -10], 56, 54) },
+  // 16 the lesson
   { line: 16, t0: lineStart(16), set: "pomp", light: "golden", sunAz: 160, sunEl: 8, cam: mv([0.9, 1.4, 5.5], [0.7, 1.45, 4.8], [0.2, 4, -40], [0.2, 6, -40], 54, 50) },
   { line: 16, t0: wt(16, "choose"), set: "pomp", light: "golden", sunAz: 160, sunEl: 8, cam: mv([-3.5, 1.0, 6], [-1.2, 1.5, 3], [0, 1.6, 0], [0, 6, -30], 48, 34) },
 ];

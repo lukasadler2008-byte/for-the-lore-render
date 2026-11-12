@@ -325,35 +325,42 @@ const s4 = (cam: CamInfo, t: number, out: Stage, sub: number) => {
   plume(out, t, TB()); lavaStreaks(out, t, TB());
   const k = clamp01((t - TB()) / 0.6); for (let i = 0; i < 14; i++) { const a = (i / 14) * 6.283, r = k * (30 + 60 * hh(i, 2)); sv(out, { k: "ashO", x: Math.cos(a) * r, y: 200 + (hh(i, 3) * 90 + 40) * k, z: -380 + Math.sin(a) * r * 0.6, s: 7 * (1 - k * 0.6) + 2 }); }
 };
+// ---- shared volcano state ----
+const roof = (out: Stage, t: number, tb: number) => { const k = clamp01((t - tb) / 6); if (k <= 0) return; for (let i = 0; i < 14; i++) sv(out, { k: "ash", x: (hh(i, 1) - 0.5) * 200, y: 125 + hh(i, 4) * 35, z: -90 + (hh(i, 2) - 0.5) * 190, s: 75 * k, yaw: i + t * 0.05 }); };
+const embers = (out: Stage, t: number) => { for (let i = 0; i < 14; i++) { const ph = (((t * 0.5 + hh(i, 1)) % 1) + 1) % 1; sv(out, { k: "ashO", x: (hh(i, 2) - 0.5) * 90, y: 215 + ph * 100, z: -380 + (hh(i, 3) - 0.5) * 120, s: 1.5 + 2 * (1 - ph) }); } };
+const night = (out: Stage, t: number) => { plume(out, t, TB() - 5); lavaStreaks(out, t, TB() - 10); roof(out, t, TB() - 20); lamps(out, t); embers(out, t); wave(out, t); };
+const runnersAhead = (cam: CamInfo, t: number, out: Stage) => { const dt = t - wt(8, "rushed"); for (let i = 0; i < 4; i++) { const z = -36 - i * 4 + 5.5 * dt, zf = pathAt(waveD(t)).z; if (zf > z - 3) continue; rm(cam, t, out, i + 1, (i % 2 ? 1.6 : -1.8), 0, z, "shock", { mode: "march", phase: q((t * 1.6 + i * 0.2) % 1, 10), tilt: 0.16 }); } };
 // ---- 5 the column of ash ----
 const s5 = (cam: CamInfo, t: number, out: Stage, sub: number) => {
   plume(out, t, TB()); lavaStreaks(out, t, TB());
-  if (sub === 0) for (let i = 0; i < 4; i++) rm(cam, t, out, i + 1, -2.4 + i * 1.6, 0, -3 - (i % 2) * 1.2, "shock", { shrug: 0.3 });
+  if (sub === 0) { rm(cam, t, out, 1, 0, 0, 0, "shock", { shrug: 0.3 }); rm(cam, t, out, 2, -2.2, 0, -3, "shock", {}); rm(cam, t, out, 3, 2.4, 0, -4.5, "nervous", {}); }
+  if (sub === 2) { roof(out, t, wt(5, "miles") - 1); rain(cam, t, out, "flake", 50, 0.1, 3, 8); }
 };
 // ---- 6 pumice rain ----
 const s6 = (cam: CamInfo, t: number, out: Stage, sub: number) => {
-  plume(out, t, TB()); lavaStreaks(out, t, TB());
+  plume(out, t, TB()); lavaStreaks(out, t, TB()); roof(out, t, wt(5, "miles") - 1);
   rain(cam, t, out, "pum", 30, 0.28, 9, 8); rain(cam, t, out, "flake", 40, 0.12, 3, 9);
-  if (sub === 0) { const dt = t - lineStart(6); for (let i = 0; i < 8; i++) rm(cam, t, out, i + 1, -1.2 + (i % 3) * 1.4, 0, -2 + i * 1.3 + 4.8 * dt, i % 2 ? "shock" : "nervous", { mode: "march", phase: q((t * 1.5 + i * 0.17) % 1, 10), tilt: 0.14 }); }
-  else for (let i = 0; i < 4; i++) rm(cam, t, out, i + 3, 4.7 + (i % 2) * 0.6, 0, -4.8 - i * 0.9, "nervous", { mode: "sit" } as never);
+  if (sub <= 1) { const dt = t - lineStart(6); for (let i = 0; i < 8; i++) rm(cam, t, out, i + 1, -1.2 + (i % 3) * 1.4, 0, -2 + i * 1.3 + 4.8 * dt, i % 2 ? "shock" : "nervous", { mode: "march", phase: q((t * 1.5 + i * 0.17) % 1, 10), tilt: 0.14 }); }
+  else { const dt = t - wt(6, "others"); for (let i = 0; i < 6; i++) { const p = clamp01(dt / (0.9 + 0.22 * i)); if (p >= 1) continue; rm(cam, t, out, i + 3, lip(-1.0 + i * 0.5, 5.6, smooth(p)), 0, lip(-1.5 + (i % 3) * 0.8, -6.2, smooth(p)), "shock", { mode: "march", phase: q((t * 1.5 + i * 0.17) % 1, 10), tilt: 0.14 }); } }
 };
 // ---- 7 the deadly mistake ----
 const s7 = (cam: CamInfo, t: number, out: Stage, sub: number) => {
-  void sub; plume(out, t, TB()); rain(cam, t, out, "pum", 26, 0.25, 9, 6); rain(cam, t, out, "flake", 50, 0.1, 3, 7);
+  plume(out, t, TB()); roof(out, t, wt(5, "miles") - 1); rain(cam, t, out, "pum", 26, 0.25, 9, 6); rain(cam, t, out, "flake", 50, 0.1, 3, 7);
   soft(out, "255,120,50", 0.35, 6.0, 1.4, -6, 3);
+  if (sub === 1) { const k = clamp01((t - wt(7, "mistake")) / 1.4); for (let i = 0; i < 22; i++) { const f = i / 22; sv(out, { k: "pum", x: 7 + (hh(i, 1) - 0.5) * 5, y: 5.5 + 0.9 * f * k + 0.2 * hh(i, 2), z: -6 + (hh(i, 3) - 0.5) * 5, s: 0.35 + 0.25 * hh(i, 4), pitch: i, roll: i * 2 }); } }
 };
 // ---- 8 midnight: the wave ----
 const s8 = (cam: CamInfo, t: number, out: Stage, sub: number) => {
-  const tb = TB(); plume(out, t, tb - 5); lavaStreaks(out, t, tb - 10); lamps(out, t);
-  for (let i = 0; i < 14; i++) { const ph = (((t * 0.5 + hh(i, 1)) % 1) + 1) % 1; sv(out, { k: "ashO", x: (hh(i, 2) - 0.5) * 90, y: 215 + ph * 100, z: -380 + (hh(i, 3) - 0.5) * 120, s: 1.5 + 2 * (1 - ph) }); }
-  wave(out, t);
-  if (sub >= 2) { const dt = t - wt(8, "rushed"); for (let i = 0; i < 4; i++) { const z = -36 - i * 4 + 5.5 * dt, zf = pathAt(waveD(t)).z; if (zf > z - 1.5) continue; rm(cam, t, out, i + 1, (i % 2 ? 1.6 : -1.8), 0, z, "shock", { mode: "march", phase: q((t * 1.6 + i * 0.2) % 1, 10), tilt: 0.16 }); } }
+  night(out, t);
+  if (sub === 2) { rm(cam, t, out, 1, 0, 0, 0, "shock", { shrug: 0.4, headTilt: 0.1 * Math.sin(t * 9) }); soft(out, "255,120,40", 0.55, 0, 1.6, -1, 5); }
+  if (sub === 3) { for (let i = 0; i < 4; i++) fire(out, t, -3.8 + 0.0 * i, 0.5, -33.8 + i * 0.5, 0.35 + 0.12 * Math.sin(t * 8 + i) + 0.3 * clamp01((t - wt(8, "hotter")) / 1.2)); soft(out, "255,150,40", 0.8, -3.9, 1.0, -33, 4.5); for (let i = 0; i < 5; i++) sv(out, { k: "loaf", x: -3.88, y: 0.54, z: -33.7 + i * 0.4, s: 1.3, yaw: i * 0.8 }); }
+  if (sub >= 4) runnersAhead(cam, t, out);
 };
 // ---- 9 it killed everyone ----
 const s9 = (cam: CamInfo, t: number, out: Stage, sub: number) => {
-  lamps(out, t); plume(out, t, TB() - 5); wave(out, t);
-  if (sub === 0) { const dt = t - wt(8, "rushed"); for (let i = 0; i < 4; i++) { const z = -36 - i * 4 + 5.5 * dt, zf = pathAt(waveD(t)).z; if (zf > z - 1.5) continue; rm(cam, t, out, i + 1, (i % 2 ? 1.6 : -1.8), 0, z, "shock", { mode: "march", phase: q((t * 1.6 + i * 0.2) % 1, 10) }); } return; }
-  for (let i = 0; i < 14; i++) sv(out, { k: "ash", x: (i % 2 ? 1 : -1) * (7 + 3 * hh(i, 1)), y: 4 + hh(i, 2) * 7 + Math.sin(t * 0.7 + i), z: 30 - i * 5.5, s: 5 + 3 * hh(i, 3), yaw: i + t * 0.1 });
+  night(out, t);
+  if (sub === 0) { runnersAhead(cam, t, out); return; }
+  for (let i = 0; i < 14; i++) sv(out, { k: "ash", x: (i % 2 ? 1 : -1) * (13 + 4 * hh(i, 1)), y: 7 + hh(i, 2) * 8 + Math.sin(t * 0.7 + i), z: 30 - i * 5.5, s: 5 + 3 * hh(i, 3), yaw: i + t * 0.1 });
   rain(cam, t, out, "flake", 60, 0.1, 1.2, 8);
 };
 // ---- 10 buried in ash ----
@@ -374,10 +381,10 @@ const s13 = (cam: CamInfo, t: number, out: Stage, sub: number) => {
 // ---- 14 the molds ----
 const s14 = (cam: CamInfo, t: number, out: Stage, sub: number) => {
   void cam; void t; void sub;
-  const M: [number, number, number, number][] = [[0, 0, -0.4, 0.3], [-3.2, 0, -2.4, 2.2], [2.8, 0, -3.6, 4.0], [-2.0, 0, 2.6, 1.0], [3.0, 0, 1.8, 3.2], [0.4, 0, -6.2, 5.0]];
+  const M: [number, number, number, number][] = [[0, 0, -0.4, 0.3], [-3.2, 0, -2.4, 2.2], [2.8, 0, -3.6, 4.0], [-2.0, 0, 2.0, 1.0], [3.0, 0, 1.2, 3.2], [0.4, 0, -6.2, 5.0]];
   M.forEach(([x, y, z, yaw]) => sv(out, { k: "mold", x, y, z, yaw, s: 1.15 }));
 };
-// ---- 15 today: the mountain and the people who live under it ----
+// ---- 15 today ----
 const s15 = (cam: CamInfo, t: number, out: Stage, sub: number) => {
   wisp(out, t, 6, 1.0);
   if (sub === 0) { for (let i = 0; i < 4; i++) walker(cam, t, out, i, (i % 2 ? 2 : -2), -10 + i * 9, 1, "smile"); return; }
@@ -385,7 +392,7 @@ const s15 = (cam: CamInfo, t: number, out: Stage, sub: number) => {
 };
 // ---- 16 the lesson ----
 const s16 = (cam: CamInfo, t: number, out: Stage, sub: number) => {
-  void sub; wisp(out, t, 8, 1.4);
+  wisp(out, t, 8, 1.4);
   rm(cam, t, out, 4, 0, 0, 0, sub ? "stern" : "nervous", {});
   void fire;
 };

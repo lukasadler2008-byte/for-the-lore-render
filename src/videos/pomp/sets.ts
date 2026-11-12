@@ -408,7 +408,7 @@ export const buildSets = (root: THREE.Object3D, kit: Kit): SetBuild => {
       b.add(flatRect(6, 7.5, -150, 60, 0.04, 3), surf("pompWalk", () => sandTex("pompWalk", "#cdb892", "#bca77c")));
     }
     const hs: [number, number, number, number][] = []; // z, w, d, h per row
-    for (let i = 0; i < 17; i++) { const z = 30 - i * 9; for (const side of [-1, 1]) { const w = 5.5 + r() * 2.5, d = 7 + r() * 2, h = 4 + r() * 2.8, x = side * (6.05 + d / 2); pomHouse(b, bn, x, z, w, d, h, side > 0 ? -Math.PI / 2 : Math.PI / 2, i * 2 + (side > 0 ? 1 : 0), i % 2 === 0); hs.push([z, w, d, h]); } }
+    for (let i = 0; i < 17; i++) { const z = 30 - i * 9; for (const side of [-1, 1]) { const w = 5.5 + r() * 2.5, d = 7 + r() * 2, h0 = 4 + r() * 2.8, h = i === 4 ? 5.2 : h0, x = side * (6.05 + d / 2); pomHouse(b, bn, x, z, w, d, h, side > 0 ? -Math.PI / 2 : Math.PI / 2, i * 2 + (side > 0 ? 1 : 0), i % 2 === 0); hs.push([z, w, d, h]); } }
     for (let side = -1; side <= 1; side += 2) for (let row = 0; row < 12; row++) for (let col = 1; col < 4; col++) { const x = side * (18 + col * 12 + r() * 3), z = 34 - row * 11 - r() * 3; box(b, stucM(row + col), x, 0, z, 7 + r() * 3, 4 + r() * 3, 7 + r() * 3, r() * 0.3); box(b, tileM, x, 5.5 + r(), z, 8, 0.3, 8); }
     // forum + temple at the end of the street (z -100..-150)
     const T = -128;
