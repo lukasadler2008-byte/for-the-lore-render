@@ -7,6 +7,7 @@ import { MicroShort, MICRO_FRAMES } from "./videos/micro/Micro";
 import { MuskShort, MUSK_FRAMES } from "./videos/musk/Musk";
 import { PizzaShort, PIZZA_FRAMES } from "./videos/pizza/Pizza";
 import { TroyShort, TROY_FRAMES } from "./videos/troy/Troy";
+import { PompShort, POMP_FRAMES } from "./videos/pomp/Pomp";
 
 export const RemotionRoot: React.FC = () => (
   <>
@@ -15,6 +16,7 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="DanceShort" component={DanceShort} durationInFrames={DANCE_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="MicroShort" component={MicroShort} durationInFrames={MICRO_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="MuskShort" component={MuskShort} durationInFrames={MUSK_FRAMES} fps={30} width={1080} height={1920} />
+    <Composition id="PompShort" component={PompShort} durationInFrames={POMP_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="TroyShort" component={TroyShort} durationInFrames={TROY_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="PizzaShort" component={PizzaShort} durationInFrames={PIZZA_FRAMES} fps={30} width={1080} height={1920} />
   </>
